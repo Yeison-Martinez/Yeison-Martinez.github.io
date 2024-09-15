@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -28,7 +26,7 @@ header {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .nombre_evento {
@@ -39,11 +37,11 @@ header {
     justify-content: end;
 }
 
-.nombre_evento > h1 {
+.nombre_evento>h1 {
     color: #fff;
 }
 
-.nombre_evento > span {
+.nombre_evento>span {
     color: #cdcdcd;
     font-style: italic;
     text-align: end;
@@ -57,7 +55,7 @@ header {
     gap: 10px;
 }
 
-.info_evento > p > i {
+.info_evento>p>i {
     margin-right: 10px;
 }
 
@@ -77,6 +75,14 @@ main {
     gap: 15px;
 }
 
+.total_efectivo,
+.total_plastico,
+.total_boletas,
+.producido,
+.base {
+    border: 2px solid rgb(196, 196, 196);
+}
+
 .total_efectivo {
     background-color: #ffffff;
     border-radius: 8px;
@@ -86,16 +92,16 @@ main {
     position: relative;
 
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 }
 
-.total_efectivo > h2 {
+.total_efectivo>h2 {
     margin-bottom: 15px;
 }
 
-.total_efectivo > table,
-.producido > table,
-.base > table {
+.total_efectivo>table,
+.producido>table,
+.base>table {
     width: 80%;
     margin: 10px auto;
     text-align: center;
@@ -103,13 +109,13 @@ main {
     color: #646464;
 }
 
-.total_efectivo > table > thead,
-.resultado > .producido > table > thead,
-.base > table > thead {
+.total_efectivo>table>thead,
+.resultado>.producido>table>thead,
+.base>table>thead {
     background-color: rgb(214, 214, 214);
 }
 
-table > thead > tr > th {
+table>thead>tr>th {
     padding: 7px 0;
 }
 
@@ -117,11 +123,11 @@ td {
     width: 100px;
 }
 
-td > input {
+td>input {
     width: 60px;
     padding: 5px;
     text-align: center;
-    
+
 }
 
 .contenedor_resultado {
@@ -149,14 +155,14 @@ td > input {
     color: #000000;
 }
 
-.caja_resultado > .total, 
-.caja_resultado--base > .total {
+.caja_resultado>.total,
+.caja_resultado--base>.total {
     font-weight: 800;
     text-decoration: underline;
 }
 
-.contenedor_resultado > button {
-    padding: 0 10px; 
+.contenedor_resultado>button {
+    padding: 0 10px;
     font-size: 1.5em;
     border-radius: 5px;
     font-weight: 700;
@@ -164,7 +170,7 @@ td > input {
     transition: .2s ease-out;
 }
 
-.contenedor_dos{
+.contenedor_dos {
     width: 40%;
 
     display: flex;
@@ -184,7 +190,7 @@ td > input {
     gap: 10px;
 }
 
-.total_plastico > h2 {
+.total_plastico>h2 {
     margin-bottom: 10px;
 }
 
@@ -195,7 +201,7 @@ td > input {
     gap: 10px;
 }
 
-.contenedor_plastico > div > input {
+.contenedor_plastico>div>input {
     text-align: center;
     padding: 2px 0;
 }
@@ -208,11 +214,11 @@ td > input {
     position: relative;
 }
 
-.total_boletas > h2 {
+.total_boletas>h2 {
     margin-bottom: 10px;
 }
 
-.total_boletas > table {
+.total_boletas>table {
     width: 100%;
     color: #646464;
 }
@@ -230,7 +236,7 @@ td > input {
     width: 100%;
 }
 
-.contenedor_boton > button {
+.contenedor_boton>button {
     width: 100%;
     height: 100%;
     font-size: 1.3em;
@@ -241,7 +247,7 @@ td > input {
     transition: letter-spacing .3s ease-in-out;
 }
 
-.contenedor_boton > button:hover {
+.contenedor_boton>button:hover {
     background-color: #319618;
     letter-spacing: 2px;
 }
@@ -286,7 +292,7 @@ h3 {
     align-items: center;
     border-radius: 2px;
     transition: right .5s;
-    
+
 }
 
 .mensajeFaltante,
@@ -309,7 +315,7 @@ h3 {
     background-color: rgb(254, 255, 220);
 }
 
-.mensajes > p {
+.mensajes>p {
     height: 20px;
     display: flex;
     align-items: center;
@@ -327,15 +333,17 @@ h3 {
     align-items: center;
 }
 
-.mensajeFaltante > .mensajeIcon {
+.mensajeFaltante>.mensajeIcon {
     background-color: rgb(255, 43, 43);
     color: rgb(87, 8, 8);
 }
-.mensajeCuadrado > .mensajeIcon {
+
+.mensajeCuadrado>.mensajeIcon {
     background-color: rgb(95, 255, 63);
     color: rgb(16, 59, 8);
 }
-.mensajeSobrante > .mensajeIcon {
+
+.mensajeSobrante>.mensajeIcon {
     background-color: rgb(248, 255, 33);
     color: rgb(136, 123, 0);
 }
@@ -344,7 +352,7 @@ h3 {
     padding: 0 30px 0 20px;
 }
 
-.mensajeTxt > .negrita {
+.mensajeTxt>.negrita {
     margin-left: 10px;
 }
 
@@ -375,13 +383,21 @@ h3 {
 
     header,
     .contenedor_section,
-    main > h3,
+    main>h3,
     .producido,
-    .base > h2,
-    .base > table > thead,
+    .base>h2,
+    .base>table>thead,
     .btn__imprimir,
     .mensajes {
         display: none;
+    }
+
+    .total_efectivo,
+    .total_plastico,
+    .total_boletas,
+    .producido,
+    .base {
+        border: 0;
     }
 
     .resultado {
@@ -400,7 +416,7 @@ h3 {
         font-size: 14px;
     }
 
-    .base > table {
+    .base>table {
         border: none;
         color: #202020;
     }
@@ -420,7 +436,7 @@ h3 {
         text-align: center;
     }
 
-    .caja_resultado--base > .total {
+    .caja_resultado--base>.total {
         text-decoration: none;
     }
 
@@ -429,6 +445,3 @@ h3 {
     }
 
 }
-
-
-
