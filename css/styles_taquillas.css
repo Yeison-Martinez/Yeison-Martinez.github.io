@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: #cfcfcf;
+    background-color: #f1efef;
 }
 
 /* header */
@@ -281,7 +281,7 @@ h3 {
     background-color: azure;
     position: fixed;
     top: 20px;
-    right: -2000px;
+    right: -1000px;
     display: flex;
     align-items: center;
     border-radius: 2px;

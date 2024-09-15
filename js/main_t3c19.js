@@ -9,7 +9,8 @@ var ttl_cant2 = document.getElementById("ttl_cant2");
 var ttl_cant1 = document.getElementById("ttl_cant1");
 var ttlbill = document.getElementById("ttl_bill");
 var ttl_plas = document.getElementById("ttl_plas");
-var ttl_cant8k = document.getElementById("ttl_cant8k");
+var ttl_cant50k = document.getElementById("ttl_cant50k");
+var ttl_cant20k = document.getElementById("ttl_cant20k");
 var ttl_cantB = document.getElementById("ttl_cant--b");
 var ttl_dinero = document.getElementById("ttl_dinero");
 var can100_p = document.getElementById("can100_p");
@@ -150,19 +151,19 @@ function calc() {
     ttl_plas.innerHTML = `$ ${sum_plas_s}`;
 
     // TOTAL BOLETAS DE 20K
-    var cant8k = parseFloat(document.getElementById("cant8k").value);
-    var vlr_b8 = cant8k * 8000;
-    var vlr_b8_s = Separador(vlr_b8);
-    ttl_cant8k.innerHTML = `$ ${vlr_b8_s}`;
+    var cant20k = parseFloat(document.getElementById("cant20k").value);
+    var vlr_b20 = cant20k * 20000;
+    var vlr_b20_s = Separador(vlr_b20);
+    ttl_cant20k.innerHTML = `$ ${vlr_b20_s}`;
 
     // TOTAL BOLETAS DE 50K
-    // var cant50k = parseFloat(document.getElementById("cant50k").value);
-    // var vlr_b50 = cant50k * 50000;
-    // var vlr_b50_s = Separador(vlr_b50);
-    // ttl_cant50k.innerHTML = `$ ${vlr_b50_s}`;
+    var cant50k = parseFloat(document.getElementById("cant50k").value);
+    var vlr_b50 = cant50k * 50000;
+    var vlr_b50_s = Separador(vlr_b50);
+    ttl_cant50k.innerHTML = `$ ${vlr_b50_s}`;
 
     // PRODUCIDO TOTAL
-    var sum_bol = vlr_b8;
+    var sum_bol = vlr_b50 + vlr_b20;
     var sum_bol_s = Separador(sum_bol);
     ttl_cantB.innerHTML = `$ ${sum_bol_s}`;
 
@@ -382,9 +383,9 @@ function calc() {
 
 
     //  MONTRAR MENSAJES DE ALERTA 
-    if ((sum_bol + 100000) > sum_din) {
+    if ((sum_bol + 300000) > sum_din) {
         mensajeFaltante.classList.add("show");
-        var faltante = (sum_bol + 100000) - sum_din;
+        var faltante = (sum_bol + 300000) - sum_din;
         var faltante_s = Separador(faltante);
         Swal.fire({
             icon: "error",
@@ -393,7 +394,7 @@ function calc() {
             footer: '<i class="fa-solid fa-circle-xmark"></i> Valida los datos ingresados!'
         });
         mala.innerHTML = `$ ${faltante_s}`;
-    } else if ((sum_bol + 100000) === sum_din) {
+    } else if ((sum_bol + 300000) === sum_din) {
         Swal.fire({
             position: "center",
             icon: "success",
@@ -402,9 +403,9 @@ function calc() {
             timer: 3000
         });
         mensajeCuadrado.classList.add("show");
-    } else if ((sum_bol + 100000) < sum_din) {
+    } else if ((sum_bol + 300000) < sum_din) {
         mensajeSobrante.classList.add("show");
-        var sobrante = sum_din - (sum_bol + 100000);
+        var sobrante = sum_din - (sum_bol + 300000);
         var sobrante_s = Separador(sobrante);   
         Swal.fire({
             icon: "warning",
