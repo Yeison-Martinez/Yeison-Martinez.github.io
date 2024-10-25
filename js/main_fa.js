@@ -383,9 +383,9 @@ function calc() {
 
 
     //  MONTRAR MENSAJES DE ALERTA 
-    if ((sum_bol + 200000) > sum_din) {
+    if ((sum_bol + 100000) > sum_din) {
         mensajeFaltante.classList.add("show");
-        var faltante = (sum_bol + 200000) - sum_din;
+        var faltante = (sum_bol + 100000) - sum_din;
         var faltante_s = Separador(faltante);
         Swal.fire({
             icon: "error",
@@ -394,7 +394,7 @@ function calc() {
             footer: '<i class="fa-solid fa-circle-xmark"></i> Valida los datos ingresados!'
         });
         mala.innerHTML = `$ ${faltante_s}`;
-    } else if ((sum_bol + 200000) === sum_din) {
+    } else if ((sum_bol + 100000) === sum_din) {
         Swal.fire({
             position: "center",
             icon: "success",
@@ -403,9 +403,9 @@ function calc() {
             timer: 3000
         });
         mensajeCuadrado.classList.add("show");
-    } else if ((sum_bol + 200000) < sum_din) {
+    } else if ((sum_bol + 100000) < sum_din) {
         mensajeSobrante.classList.add("show");
-        var sobrante = sum_din - (sum_bol + 200000);
+        var sobrante = sum_din - (sum_bol + 100000);
         var sobrante_s = Separador(sobrante);   
         Swal.fire({
             icon: "warning",
