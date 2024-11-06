@@ -22,3 +22,21 @@
             <i class="fa-solid fa-angles-right"></i>
           </a>
         </div>
+
+
+------------ INGRESOS HGI --------------------
+--- P3 ---
+CAJA 03 = 07
+CAJA 02 = 08
+CAJA 19 = 09
+CAJA 15 = 10
+CAJA 12 = 11
+
+--- P1 ---
+CAJA 04 = 16
+CAJA 05 = 15
+
+--- PP ---
+CAJA 07 = 
+CAJA 08 = 
+CAJA 16 = 
