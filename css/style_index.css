@@ -13,6 +13,9 @@ body {
     background-size: 200px;
     background-color: rgb(255, 255, 255);
     /* background: linear-gradient(); */
+    height: 100vh;
+    
+    position: relative;
 }
 
 main {
@@ -23,6 +26,8 @@ main {
     display: flex;
     justify-content: center;
 }
+
+
 
 header {
     background-color: rgb(0, 131, 197);
@@ -45,7 +50,7 @@ header > img {
     /* background-color: rgb(0, 131, 197); */
     color: #ffffff;
     font-size: 2em;
-    letter-spacing: 10px;
+    /* letter-spacing: 10px; */
     text-align: center;
     padding: 20px 0;
 }
@@ -142,6 +147,32 @@ header > img {
 .contenedor__link:hover  .link{
     transform: translateX(16px) ;
     color: black;
+}
+
+.ing_hgi {
+    position: absolute;
+    bottom: 10px;
+    margin: 10px;
+}
+
+.ing_hgi > a {
+    background-color: #ebebeb;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    border-radius: 5px;
+    border: 1px solid #000;
+    transition: all .4s ease;
+}
+
+.ing_hgi > a > i {
+    margin-left: 10px;
+}
+
+.ing_hgi > a:hover {
+    background-color: #000000;
+    color: #ebebeb;
 }
 
 @media screen and (max-width: 800px) {
