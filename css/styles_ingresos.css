@@ -75,10 +75,10 @@ header > img {
     font-size: 24px;
 }
 .contenedor table thead > tr {
-    height: 80px;
+    height: 60px;
 }
 .contenedor table tbody > tr {
-    height: 50px;
+    height: 30px;
     color: #7e7e7e;
 }
 
