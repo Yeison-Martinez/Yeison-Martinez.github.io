@@ -123,7 +123,7 @@ header > img {
     transition: all .4s ease;
 }
 .btn_hgi {
-    border: 2px solid #ff5252;
+    border: 2px solid #3ca013;
     transition: all .4s ease;
 }
 
@@ -132,7 +132,7 @@ header > img {
     color: #ebebeb;
 }
 .ing_hgi > .btn_hgi:hover {
-    background-color: #ff5252;
+    background-color: #3ca013;
     color: #ebebeb;
 }
 
