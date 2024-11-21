@@ -20,10 +20,11 @@ body {
 
 main {
     font-family: 'Signika Negative', sans-serif;
-    width: 80%;
+    width: 95%;
     margin: 30px auto;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -55,46 +56,55 @@ header > img {
 }
 
 .contenedor {
-    width: 900px;
-    padding: 5px;
+    background-color: rgb(219, 219, 219);
+    width: 100%;
+    padding: 20px;
 
     display: flex;
-    gap: 20px;
-    flex-wrap: nowrap;
+    gap: 10px;
 }
 
-.contenedor table {
-    width: 100%;
-    text-align: center;
+.contenedor > .flex_uno,
+.contenedor > .flex_dos {
+    
+    padding: 20px;
+    border-radius: 8px;
 }
 
-.contenedor table th {
-    background-color: rgb(194, 193, 193);
-    /* background-color: rgb(0, 0, 0); */
-    color: #000000;
-    font-size: 24px;
-}
-.contenedor table thead > tr {
-    height: 60px;
-}
-.contenedor table tbody > tr {
-    height: 30px;
-    color: #7e7e7e;
+.contenedor > .flex_uno {
+    background-color: rgb(255, 255, 255);
+    width: 40%;
 }
 
-.contenedor table, th, td {
-    border: 2px solid rgb(206, 205, 205);
-    border-collapse: collapse;
+.contenedor > .flex_uno > ul,
+.contenedor > .flex_dos > ul {
+    padding-left: 40px;
 }
 
-.color_gray {
-    /* background-color: #d1d0d0; */
+.contenedor > .flex_uno > ul > li {
+    padding: 5px;
+}
+.contenedor > .flex_dos {
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+}
+.flex_uno > h2,
+.flex_dos > h2 {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #838383;
 }
 
-.subtitle {
-    font-size: 1.5em;
-    color: #000;
+
+.contenedor > .flex_dos > ul > li {
+    padding: 5px;
 }
+
+.text-gray {
+    color: #838383;
+}
+
+
 
 .ing_hgi {
     position: absolute;
@@ -122,16 +132,9 @@ header > img {
     border: 2px solid #000;
     transition: all .4s ease;
 }
-.btn_hgi {
-    border: 2px solid #3ca013;
-    transition: all .4s ease;
-}
+
 
 .ing_hgi > .btn_volver:hover {
     background-color: #000000;
-    color: #ebebeb;
-}
-.ing_hgi > .btn_hgi:hover {
-    background-color: #3ca013;
     color: #ebebeb;
 }
