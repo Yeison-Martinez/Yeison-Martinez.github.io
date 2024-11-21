@@ -73,7 +73,7 @@ header > img {
 
 .contenedor > .flex_uno {
     background-color: rgb(255, 255, 255);
-    width: 45%;
+    width: 60%;
 }
 
 .contenedor > .flex_uno > ul,
@@ -86,7 +86,7 @@ header > img {
 }
 .contenedor > .flex_dos {
     background-color: rgb(255, 255, 255);
-    width: 25%;
+    width: 20%;
 }
 .flex_uno > h2,
 .flex_dos > h2 {
