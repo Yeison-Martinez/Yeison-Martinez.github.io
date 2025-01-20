@@ -46,7 +46,7 @@ header {
 
 main {
     width: 100%;
-    margin: 10px 0;
+    margin: 10px 0 40px 0;
     padding: 0 0 20px 0;
 }
 
@@ -345,6 +345,19 @@ h3 {
 
 .infor_taquilla {
     display: none;
+}
+
+/* footer */
+footer {
+    background-color: rgba(223, 223, 223, 0.637);
+    width: 100%;
+    padding: 2px 8px;
+    text-align: end;
+    position: fixed;
+    bottom: 0;
+}
+footer > p {
+    color: #7e7e7e;
 }
 
 /* ESTILOS PARA LA VISTA DE IMPRESION */

@@ -6,7 +6,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cierres del dia</title>
+  <title>Info.</title>
 
   <!-- ESTILOS CSS -->
   <link rel="stylesheet" href="css/style_index.css" />
@@ -26,28 +26,46 @@
 
 <body>
   <header>
-    <img src="images/y_white.png" alt="">
-    <h1 class="titulo">CIERRES DEL DÍA</h1>
+    <div class="logo">
+      <img src="images/y_white.png" alt="">
+      <!-- <h1 class="titulo">CIERRES DEL DÍA</h1> -->
+    </div>
+    <nav class="nav__contenedor">
+      <ul class="ul__items">
+        <li class="li__item">
+          <a href="index.html">Inicio</a>
+        </li>
+        <li class="li__item">
+          <a href="cierre_caja.html">Cierres de caja</a>
+        </li>
+        <li class="li__item">
+          <a href="ingresos_hgi.html">Ingresos HGI</a>
+        </li>
+        <li class="li__item">
+          <a href="transacciones.html">Transacciones</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <main>
-    <div class="contenedor">
+    <!-- <div class="contenedor">
       <div class="contenedor__cuadros">
         <h2>Cuadros de Cierre</h2>
 
         <div class="contenedor__link">
-          <span class="link">Mundo Santa (Taq 1 Caja 2)</span>
+          <span class="link">Mundo Hielo (Taq 1 Caja 2)</span>
           <a href="mundo_santaT1C2.html" class="contenedor__icon" target="_blank">
             <i class="fa-solid fa-angles-right"></i>
           </a>
         </div>
         <div class="contenedor__link">
-          <span class="link">Mundo Santa (Taq 2 Caja 3)</span>
+          <span class="link">Mundo Hielo (Taq 2 Caja 3)</span>
           <a href="mundo_santaT2C3.html" class="contenedor__icon" target="_blank">
             <i class="fa-solid fa-angles-right"></i>
           </a>
         </div>
         <div class="contenedor__link">
-          <span class="link">Mundo Santa (Taq 3 Caja 19)</span>
+          <span class="link">Mundo Hielo (Taq 3 Caja 19)</span>
           <a href="mundo_santaT3C19.html" class="contenedor__icon" target="_blank">
             <i class="fa-solid fa-angles-right"></i>
           </a>
@@ -61,14 +79,50 @@
 
       </div>
 
-    </div>
+    </div> -->
 
     
-  </main>
-  <div class="ing_hgi">
-    <a href="ingresos_hgi.html">Ingresos HGI <i class="fa-solid fa-arrow-right"></i></a>
-    <a href="transacciones.html">Transacciones <i class="fa-solid fa-arrow-right"></i></a>
+    <!-- carrucel -->
+    <div class="carrusel-container">
+      <div class="carrusel">
+          <div class="carrusel-item active">
+              <h2>Mundo Hielo 2025</h2>
+              <p>Del 20 de enero al 23 de febrero de 2025</p>
+          </div>
+          <div class="carrusel-item">
+              <h2>¿CÓMO INGRESAR?</h2>
+              <p> <b> Opción 1:</b> Por cada $100.000 en compras acumulables máximo en 3 facturas podrás reclamar hasta 4 boletas por $25.000 por cada una.</p><hr>
+              <p> <b> Opción 2:</b> Por cada $30.000 en compras en Happy City, Xtreme Zone, Bowland, Cinecolombia y Xtreme Karts acumulable en máximo 4 facturas podrás reclamar hasta 2 boletas por $25.000 por cada una.</p><hr>
+              <p> <b> Opción 3:</b> Si deseas ingresar y no tienes facturas de compra, el valor de cada boleta será de $50.000.</p>
+          </div>
+          <div class="carrusel-item">
+              <h2>HORARIOS</h2>
+              <h4>Taquilla</h4>
+              <p>De lunes a sábados 12:30 p.m. a 7:50 p.m.</p>
+              <p>Domingos y festivos de 11:30 a.m. a 6:50 p.m.</p><hr>
+              <h4>Evento</h4>
+              <p>De lunes a sábados 1:00 p.m. a 9:00 p.m. (último turno 8:00 p.m.)</p>
+              <p>Domingos y festivos de 12:00 m. a 8:00 p.m. (último turno 7:00 p.m.)</p>
+              
+          </div>
+          <div class="carrusel-item">
+              <h2>ESTATURA</h2>
+              <p>Todas las personas que ingresen a la atracción deben presentar boleta incluyendo niños mayores a 1.10 mt de altura, adolescentes, adultos acompañantes, adultos usuarios y adultos mayores.</p><hr>
+              <p>Los niños que midan entre 75 cm y 1.09 mt podrán ingresar gratuitamente y disfrutar de los trineos cuyo cupo está sujeto a disponibilidad.</p><hr>
+              <p>Todos los niños que tengan una estatura inferior o igual a 1.40 mt. deben ingresar con un adulto acompañante quien se hace plenamente responsable por el cuidado del menor. Cada adulto acompañante podrá hacerse cargo, máximo, de tres (03) niños con esta estatura.</p>
+          </div>
+      </div>
+      <button class="prev" onclick="prevSlide()">&#10094;</button>
+      <button class="next" onclick="nextSlide()">&#10095;</button>
   </div>
+
+  </main>
+
+  <footer>
+    <p>Yeison Martinez | 2025</p>
+  </footer>
 </body>
+
+<script src="js/main_index.js"></script>
 
 </html>

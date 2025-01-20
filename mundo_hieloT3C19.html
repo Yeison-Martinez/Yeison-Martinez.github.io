@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dulce Travesia</title>
-    <link rel="stylesheet" href="css/styles_dulceTravesia.css" />
+    <title>Taquilla 3 Caja 19</title>
+    <link rel="stylesheet" href="css/styles_taquillas.css" />
 
     <!-- ICONO -->
     <link rel="shortcut icon" href="images/y_white.png" type="image/x-icon" />
@@ -29,14 +29,15 @@
     <header>
       <div class="contenedor_header">
         <div class="nombre_evento">
-          <h1>Dulce Travesía 2024</h1>
+          <h1>Mundo Hielo 2025</h1>
+          <span>(20 Ene - 23 Feb)</span>
         </div>
         <div class="info_evento">
           <p class="fecha">
             <i class="fa-regular fa-calendar"></i>
             <span id="fecha_actual"></span>
           </p>
-          <p><i class="fa-solid fa-inbox"></i>Caja 15</p>
+          <p><i class="fa-solid fa-inbox"></i> Taquilla 3 Caja 19</p>
         </div>
       </div>
     </header>
@@ -91,6 +92,10 @@
                 <td><input type="number" id="bill1" value="0" /></td>
                 <td><span id="ttl_cant1">$</span></td>
               </tr>
+              <!-- <tr>
+                            <td colspan="2"><b>Total en efectivo</b></td>
+                            <td><span>$</span></td>
+                        </tr> -->
             </tbody>
           </table>
           <div class="caja_resultado">
@@ -121,9 +126,14 @@
             <table>
               <tbody>
                 <tr>
-                  <td class="text_end">$ 8.000</td>
-                  <td><input type="number" id="cant8k" value="0" /></td>
-                  <td class="text_start"><span id="ttl_cant8k">$</span></td>
+                  <td class="text_end">$ 50.000</td>
+                  <td><input type="number" id="cant50k" value="0" /></td>
+                  <td class="text_start"><span id="ttl_cant50k">$</span></td>
+                </tr>
+                <tr>
+                  <td class="text_end">$ 25.000</td>
+                  <td><input type="number" id="cant25k" value="0" /></td>
+                  <td class="text_start"><span id="ttl_cant25k">$</span></td>
                 </tr>
                 <div class="caja_resultado">
                   <span class="subtitulo">Producido del dia</span>
@@ -134,12 +144,13 @@
           </article>
           <div class="contenedor_boton">
             <button id="calcular">
-              <i class="fa-regular fa-circle-check"></i> Procesar
+              <i class="fa-regular fa-circle-check"></i> Calcular Base
             </button>
           </div>
         </div>
       </section>
 
+      <!-- <h3><span id="ttl_dinero"></span></h3> -->
       <h3><input type="hidden" name="" id="ttl_dinero" /></h3>
 
       <section class="resultado" id="resultado">
@@ -189,6 +200,10 @@
                 <td><span class="" id="can1_p">0</span></td>
                 <td><span id="ttl1_p">$</span></td>
               </tr>
+              <!-- <tr>
+                        <td colspan="2"><b>Total en efectivo</b></td>
+                        <td><span>$</span></td>
+                    </tr> -->
             </tbody>
           </table>
           <div class="caja_resultado">
@@ -199,8 +214,8 @@
         <article class="base">
           <h2>Base</h2>
           <div class="infor_taquilla">
-            <h2 id="">Dulce Travesía</h2>
             <h2 id="fecha_imprimir"></h2>
+            <h2 id="">Taq 3 Caja 19</h2>
           </div>
           <table>
             <thead>
@@ -251,6 +266,10 @@
                   <span id="ttl_billB_imp" class="bor_result negrita">$</span>
                 </td>
               </tr>
+              <!-- <tr>
+                        <td colspan="2"><b>Total en efectivo</b></td>
+                        <td><span>$</span></td>
+                    </tr> -->
             </tbody>
           </table>
           <div class="contenedor_resultado">
@@ -302,6 +321,6 @@
       <p>Yeison Martinez | 2025</p>
     </footer>
 
-    <script src="js/main_dulceTravesia.js"></script>
+    <script src="js/main_taquilla3caja19.js"></script>
   </body>
 </html>
