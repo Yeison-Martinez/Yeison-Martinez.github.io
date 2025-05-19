@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -49,12 +48,66 @@
   </header>
   <main class="main">
 
-    <div class="main__text">
-      <i class="fa-solid fa-circle-info"></i>
-      <h2>Sin taquilla disponible</h2>
+    <!-- carrucel -->
+    <div class="carousel">
+      <div class="slides" id="slides">
+        <div class="slide">
+          <img src="images/fondoPet2.jpg" alt="Concierto">
+          <div class="slide-content">
+            <h2>Mundo Vacaciones 2025</h2>
+            <p>Del 20 de mayo al 3 de julio del 2025</p>
+            <!-- <p class="price">Desde $50.000 COP</p> -->
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/fondoPet2.jpg" alt="Festival">
+          <div class="slide-content">
+            <h3>MECÁNICA PARA EL INGRESO</h2>
+            <p> <span class="bold">Opción 1: </span> Por cada cincuenta mil pesos (COP $50.000) en compras durante los meses de mayo, junio y julio de 2025, acumulables máximo en dos (2) facturas podrás reclamar hasta dos (2) boletas, pagando veintidós mil pesos <span class="bg-price">COP $22.000</span> por cada una.</p>
+            <p> <span class="bold">Opción 2: </span> Por cada treinta mil pesos (COP $30.000) en compras durante los meses de mayo, junio y julio de 2025, acumulables máximo en cuatro (4) facturas podrás reclamar hasta dos (2) boletas, pagando veintidós mil pesos <span class="bg-price">COP $22.000</span> por cada una.</p>
+            <p> <span class="bold">Opción 3: </span> Si deseas ingresar, pero no tienes facturas de compra, el valor de cada boleta para disfrutar de la actividad será de cincuenta mil pesos <span class="bg-price bg-red">COP $50.000</span></p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/fondoPet2.jpg" alt="Teatro">
+          <div class="slide-content">
+            <h3>HORARIOS</h2>
+            <p><span class="bg-price bg-blue">Taquilla</span> </p>
+            <p><span class="bold">Lunes a sábado</span> 12:30 p.m. a 8:00 p.m</p>
+            <p><span class="bold">Domingos y festivos</span> 11:30 a.m. a 7:00 p.m.</p>
+            <p><span class="bg-price bg-violet">Evento</span> </p>
+            <p><span class="bold">Lunes a sábado</span> 1:00 p.m. a 9:00 p.m. (último turno 8:10 p.m.)</p>
+            <p><span class="bold">Domingos y festivos</span> 12:00 p.m. a 8:00 p.m. (último turno 7:10 p.m.)</p>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="images/fondoPet2.jpg" alt="Festival">
+          <div class="slide-content">
+            <h3>INGRESO</h2>
+            <p>
+              <u>
+                <li></li>
+              </u>
+            </p>
+            <p> <span class="bold">1. </span> La capacidad máxima es de ochenta (80) personas por turno. Cada turno es de veinte (20) minutos.</p>
+            <p> <span class="bold">2. </span> La estatura mínima para hacer uso de los deslizadores es de 91 cm. Por seguridad recomendamos que los niños cuya estatura estén entre 91 cm. hasta 1.40 mt., estén acompañados de un adulto responsable siempre que hagan uso de los deslizadores.</p>
+            <p> <span class="bold">3. </span> Por el deslizador de dos carriles solo se podrán lanzar dos (2) personas a la vez, en los casos en que se vaya a deslizar un niño con estatura inferior a 1.40 mt. Deberá hacerlo en compañía del adulto responsable.</p>
+            <p> <span class="bold">4. </span> Para el uso del túnel de escalar:</p>
+            <p class="ps-2"> <span class="bold"> - </span> La estatura mínima para hacer uso es de 91 cm.</p>
+            <p class="ps-2"> <span class="bold"> - </span> En el túnel pueden estar máximo 2 personas al tiempo.</p>
+            <p> <span class="bold">4. </span> Para el uso de la zona de bebés:</p>
+            <p class="ps-2"> <span class="bold"> - </span> La estatura maxima para hacer uso es de 90 cm.</p>
+            <p class="ps-2"> <span class="bold"> - </span> Todos los bebés deben estar acompañados de un adulto responsable.</p>
+            
+          </div>
+        </div>
+      </div>
+  
+      <div class="buttons">
+        <button onclick="moveSlide(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <button onclick="moveSlide(1)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
     </div>
-    
-  </div>
 
   </main>
 

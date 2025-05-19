@@ -10,7 +10,7 @@ var ttl_cant1 = document.getElementById("ttl_cant1");
 var ttlbill = document.getElementById("ttl_bill");
 var ttl_plas = document.getElementById("ttl_plas");
 var ttl_cant50k = document.getElementById("ttl_cant50k");
-var ttl_cant25k = document.getElementById("ttl_cant25k");
+var ttl_cant22k = document.getElementById("ttl_cant22k");
 var ttl_cantB = document.getElementById("ttl_cant--b");
 var ttl_dinero = document.getElementById("ttl_dinero");
 var can100_p = document.getElementById("can100_p");
@@ -150,11 +150,11 @@ function calc() {
     var sum_plas_s = Separador(sum_plas);
     ttl_plas.innerHTML = `$ ${sum_plas_s}`;
 
-    // TOTAL BOLETAS DE 20K
-    var cant25k = parseFloat(document.getElementById("cant25k").value);
-    var vlr_b25 = cant25k * 25000;
-    var vlr_b25_s = Separador(vlr_b25);
-    ttl_cant25k.innerHTML = `$ ${vlr_b25_s}`;
+    // TOTAL BOLETAS DE 22K
+    var cant22k = parseFloat(document.getElementById("cant22k").value);
+    var vlr_b22 = cant22k * 22000;
+    var vlr_b22_s = Separador(vlr_b22);
+    ttl_cant22k.innerHTML = `$ ${vlr_b22_s}`;
 
     // TOTAL BOLETAS DE 50K
     var cant50k = parseFloat(document.getElementById("cant50k").value);
@@ -163,7 +163,7 @@ function calc() {
     ttl_cant50k.innerHTML = `$ ${vlr_b50_s}`;
 
     // PRODUCIDO TOTAL
-    var sum_bol = vlr_b50 + vlr_b25;
+    var sum_bol = vlr_b50 + vlr_b22;
     var sum_bol_s = Separador(sum_bol);
     ttl_cantB.innerHTML = `$ ${sum_bol_s}`;
 

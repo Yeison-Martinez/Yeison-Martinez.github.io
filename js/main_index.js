@@ -1,27 +1,38 @@
-let currentIndex = 0;
-const items = document.querySelectorAll('.carrusel-item');
-const totalItems = items.length;
+// const slides = document.getElementById('slides');
+//     const totalSlides = slides.children.length;
+//     let current = 0;
 
-function showSlide(index) {
-    // Ocultar todos los elementos
-    items.forEach(item => item.classList.remove('active'));
-    
-    // Mostrar el elemento actual
-    items[index].classList.add('active');
-}
+//     function moveSlide(direction) {
+//       current = (current + direction + totalSlides) % totalSlides;
+//       slides.style.transform = `translateX(-${current * 100}%)`;
+//     }
 
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % totalItems;
-    showSlide(currentIndex);
-}
 
-function prevSlide() {
-    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
-    showSlide(currentIndex);
-}
 
-// Mostrar el primer elemento al cargar
-showSlide(currentIndex);
+const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+    let current = 0;
+    let intervalId;
 
-// Cambiar automáticamente cada 3 segundos
-setInterval(nextSlide, 30000);
+    function moveSlide(direction) {
+      current = (current + direction + totalSlides) % totalSlides;
+      updateSlide();
+      resetInterval();
+    }
+
+    function updateSlide() {
+      slides.style.transform = `translateX(-${current * 100}%)`;
+    }
+
+    function autoSlide() {
+      current = (current + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function resetInterval() {
+      clearInterval(intervalId);
+      intervalId = setInterval(autoSlide, 100000);
+    }
+
+    // Iniciar auto-slide
+    intervalId = setInterval(autoSlide, 100000);
