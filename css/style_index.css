@@ -223,6 +223,11 @@ header>.logo>img {
         width: 50%;
     }
 
+    .slide p {
+    margin: 10px 0;
+    font-size: .7em;
+}
+
     .slide-content {
         width: 50%;
     }
