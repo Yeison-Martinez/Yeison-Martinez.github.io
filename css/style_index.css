@@ -102,6 +102,7 @@ header>.logo>img {
 .carousel {
     position: relative;
     width: 100%;
+    height: calc(100vh - 145px);
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
@@ -127,7 +128,7 @@ header>.logo>img {
 
 .slide img {
     width: 100%;
-    height: calc(100vh - 145px);
+    height: 100%;
     object-fit: cover;
     border-radius: 8px;
 }
