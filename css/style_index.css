@@ -37,7 +37,7 @@ body {
 
 
 header {
-    background-color: rgb(0, 131, 197);
+    background-color: #0083c5;
     padding: 15px 20px;
 
     display: flex;
@@ -222,7 +222,7 @@ header>.logo>img {
 
     .slide p {
     margin: 10px 0;
-    font-size: 1.1em;
+    font-size: .9em;
 }
 
     .slide-content {
@@ -345,7 +345,7 @@ header>.logo>img {
 
     /* footer */
     footer {
-        background-color: #4b8df8;
+        background-color: #0083c5;
         width: 100%;
         padding: 2px 8px;
         text-align: end;
