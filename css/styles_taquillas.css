@@ -368,7 +368,7 @@ h3 {
 
 /* footer */
 footer {
-    background-color: rgba(223, 223, 223, 0.637);
+    background-color: #4b8df8;
     width: 100%;
     padding: 2px 8px;
     text-align: end;
@@ -376,7 +376,7 @@ footer {
     bottom: 0;
 }
 footer > p {
-    color: #7e7e7e;
+    color: #e0e0e0;
 }
 
 /* ESTILOS PARA LA VISTA DE IMPRESION */
