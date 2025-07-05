@@ -1,5 +1,8 @@
-.contenedor {
-    /* background-color: bisque; */
+.section {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
 }
 
 .flex_uno {
