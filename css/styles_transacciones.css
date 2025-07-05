@@ -1,0 +1,95 @@
+
+main {
+    font-family: 'Signika Negative', sans-serif;
+    width: 95%;
+    margin: 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedor {
+    background-color: rgb(219, 219, 219);
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    gap: 10px;
+}
+
+.contenedor > .flex_uno,
+.contenedor > .flex_dos {
+    
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contenedor > .flex_uno {
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+}
+
+.contenedor > .flex_uno > ul,
+.contenedor > .flex_dos > ul {
+    padding-left: 40px;
+}
+
+.contenedor > .flex_uno > ul > li {
+    padding: 5px;
+}
+.contenedor > .flex_dos {
+    background-color: rgb(255, 255, 255);
+    width: 25%;
+}
+.flex_uno > h2,
+.flex_dos > h2 {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #838383;
+}
+
+
+.contenedor > .flex_dos > ul > li {
+    padding: 5px;
+}
+
+.text-gray {
+    color: #838383;
+}
+
+
+
+.ing_hgi {
+    position: absolute;
+    bottom: 10px;
+    margin: 10px;
+}
+
+.ing_hgi a {
+    background-color: #ebebeb;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.ing_hgi > .btn_volver > i {
+    margin-right: 5px;
+}
+.ing_hgi > .btn_hgi > i {
+    margin-left: 5px;
+}
+
+.btn_volver {
+    border: 2px solid #000;
+    transition: all .4s ease;
+}
+
+
+.ing_hgi > .btn_volver:hover {
+    background-color: #000000;
+    color: #ebebeb;
+}
+

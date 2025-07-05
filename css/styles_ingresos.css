@@ -1,0 +1,95 @@
+
+
+main {
+    font-family: 'Signika Negative', sans-serif;
+    width: 80%;
+    margin: 30px auto;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.contenedor {
+    width: 900px;
+    padding: 5px;
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+.contenedor table {
+    width: 100%;
+    text-align: center;
+}
+
+.contenedor table th {
+    background-color: rgb(194, 193, 193);
+    /* background-color: rgb(0, 0, 0); */
+    color: #000000;
+    font-size: 24px;
+}
+.contenedor table thead > tr {
+    height: 60px;
+}
+.contenedor table tbody > tr {
+    height: 30px;
+    color: #7e7e7e;
+}
+
+.contenedor table, th, td {
+    border: 2px solid rgb(206, 205, 205);
+    border-collapse: collapse;
+}
+
+.color_gray {
+    /* background-color: #d1d0d0; */
+}
+
+.subtitle {
+    font-size: 1.5em;
+    color: #000;
+}
+
+.ing_hgi {
+    position: absolute;
+    bottom: 40px;
+    margin: 10px;
+}
+
+.ing_hgi a {
+    background-color: #ebebeb;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.ing_hgi > .btn_volver > i {
+    margin-right: 5px;
+}
+.ing_hgi > .btn_hgi > i {
+    margin-left: 5px;
+}
+
+.btn_volver {
+    border: 2px solid #000;
+    transition: all .4s ease;
+}
+.btn_hgi {
+    border: 2px solid #3ca013;
+    transition: all .4s ease;
+}
+
+.ing_hgi > .btn_volver:hover {
+    background-color: #000000;
+    color: #ebebeb;
+}
+.ing_hgi > .btn_hgi:hover {
+    background-color: #3ca013;
+    color: #ebebeb;
+}
+
+
