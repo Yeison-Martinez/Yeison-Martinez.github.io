@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
@@ -9,8 +7,19 @@
     font-family: "Poppins", sans-serif;
 }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
 body {
-    background-color: #cfcfcf;
+    background-color: #ffffff;
 }
 
 /* header */
@@ -28,7 +37,7 @@ header {
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .nombre_evento {
@@ -39,11 +48,11 @@ header {
     justify-content: end;
 }
 
-.nombre_evento > h1 {
+.nombre_evento>h1 {
     color: #fff;
 }
 
-.nombre_evento > span {
+.nombre_evento>span {
     color: #cdcdcd;
     font-style: italic;
     text-align: end;
@@ -57,7 +66,7 @@ header {
     gap: 10px;
 }
 
-.info_evento > p > i {
+.info_evento>p>i {
     margin-right: 10px;
 }
 
@@ -70,59 +79,117 @@ main {
 }
 
 .contenedor_section {
-    width: 90%;
+    width: 1200px;
     margin: 0 auto;
 
     display: flex;
-    gap: 15px;
+    gap: 50px;
+}
+
+.contenedor_uno {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 50%;
 }
 
 .total_efectivo {
     background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
-    padding: 40px 20px;
-    width: 60%;
-    text-align: center;
+    padding: 50px 40px;
     position: relative;
 
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
 }
 
-.total_efectivo > h2 {
-    margin-bottom: 15px;
+.total_efectivo>h2,
+.total_plastico>h2,
+.total_boletas>h2 {
+    color: #888888;
+    font-weight: 400;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #888888;
 }
 
-.total_efectivo > table,
-.producido > table,
-.base > table {
+.parent {
+    background-color: rgb(211, 211, 211);
+    padding: 5px;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 130px 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . ."
+        "total total .";
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+}
+
+.total {
+    grid-area: total;
+}
+
+.parent>.grid_item,
+.contenedor_plastico>.grid_item,
+.parent_boletas>.grid_item {
+    text-align: center;
+    color: #646464;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 1.2em;
+    /* overflow: hidden; */
+}
+
+.parent>.grid_title,
+.contenedor_plastico>.grid_title,
+.parent_boletas>.grid_title {
+    background-color: rgb(0, 131, 197);
+    color: #ffffff;
+}
+
+.parent>.grid_subtitle,
+.contenedor_plastico>.grid_subtitle,
+.parent_boletas>.grid_subtitle {
+    background-color: rgb(174, 174, 174);
+    color: #000;
+    font-weight: 600;
+}
+
+.grid_item>input {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center;
+    border: none;
+    outline: none;
+}
+
+.grid_item>input:focus {
+    outline: 2px solid #0083c5;
+    outline-offset: -2px;
+}
+
+/* .total_efectivo>table,
+.producido>table,
+.base>table {
     width: 80%;
     margin: 10px auto;
     text-align: center;
     border: 1px solid #d8d8d8;
     color: #646464;
-}
+} */
 
-.total_efectivo > table > thead,
-.resultado > .producido > table > thead,
-.base > table > thead {
-    background-color: rgb(214, 214, 214);
-}
 
-table > thead > tr > th {
-    padding: 7px 0;
-}
-
-td {
-    width: 100px;
-}
-
-td > input {
-    width: 60px;
-    padding: 5px;
-    text-align: center;
-    
-}
 
 .contenedor_resultado {
     display: flex;
@@ -149,14 +216,14 @@ td > input {
     color: #000000;
 }
 
-.caja_resultado > .total, 
-.caja_resultado--base > .total {
+.caja_resultado>.total,
+.caja_resultado--base>.total {
     font-weight: 800;
     text-decoration: underline;
 }
 
-.contenedor_resultado > button {
-    padding: 0 10px; 
+.contenedor_resultado>button {
+    padding: 0 10px;
     font-size: 1.5em;
     border-radius: 5px;
     font-weight: 700;
@@ -164,8 +231,8 @@ td > input {
     transition: .2s ease-out;
 }
 
-.contenedor_dos{
-    width: 40%;
+.contenedor_dos {
+    width: 50%;
 
     display: flex;
     flex-direction: column;
@@ -174,45 +241,56 @@ td > input {
 
 .total_plastico {
     background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    padding: 15px 0 35px 0;
-    text-align: center;
+    padding: 50px 40px;
     position: relative;
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
-.total_plastico > h2 {
+/* .total_plastico>h2 {
     margin-bottom: 10px;
-}
+} */
 
 .contenedor_plastico {
     color: #646464;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    background-color: #cfcfcf;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
+    padding: 4px;
 }
 
-.contenedor_plastico > div > input {
-    text-align: center;
-    padding: 2px 0;
-}
 
 .total_boletas {
     background-color: #ffffff;
-    padding: 15px 0 35px 0;
-    text-align: center;
+    padding: 50px 40px;
     border-radius: 10px;
     position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
-.total_boletas > h2 {
-    margin-bottom: 10px;
+.parent_boletas {
+    background-color: #cfcfcf;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 130px 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        ". . ."
+        ". . ."
+        ". . ."
+        "total total .";
+    grid-column-gap: 4px;
+    grid-row-gap: 4px;
 }
 
-.total_boletas > table {
+
+.total_boletas>table {
     width: 100%;
     color: #646464;
 }
@@ -226,24 +304,24 @@ td > input {
 }
 
 .contenedor_boton {
-    height: 100%;
     width: 100%;
 }
 
-.contenedor_boton > button {
+.contenedor_boton>button {
     width: 100%;
-    height: 100%;
-    font-size: 1.3em;
-    background-color: #55bd3b;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.2em;
     border: none;
-    border-radius: 10px;
     cursor: pointer;
-    transition: letter-spacing .3s ease-in-out;
+    transition: background 0.3s ease;
 }
 
-.contenedor_boton > button:hover {
-    background-color: #319618;
-    letter-spacing: 2px;
+.contenedor_boton>button:hover {
+    background-color: #218838;
 }
 
 h3 {
@@ -280,13 +358,13 @@ h3 {
 .mensajes {
     background-color: azure;
     position: fixed;
-    top: 20px;
+    bottom: 40px;
     right: -2000px;
     display: flex;
     align-items: center;
     border-radius: 2px;
     transition: right .5s;
-    
+
 }
 
 .mensajeFaltante,
@@ -309,7 +387,7 @@ h3 {
     background-color: rgb(254, 255, 220);
 }
 
-.mensajes > p {
+.mensajes>p {
     height: 20px;
     display: flex;
     align-items: center;
@@ -327,15 +405,17 @@ h3 {
     align-items: center;
 }
 
-.mensajeFaltante > .mensajeIcon {
+.mensajeFaltante>.mensajeIcon {
     background-color: rgb(255, 43, 43);
     color: rgb(87, 8, 8);
 }
-.mensajeCuadrado > .mensajeIcon {
+
+.mensajeCuadrado>.mensajeIcon {
     background-color: rgb(95, 255, 63);
     color: rgb(16, 59, 8);
 }
-.mensajeSobrante > .mensajeIcon {
+
+.mensajeSobrante>.mensajeIcon {
     background-color: rgb(248, 255, 33);
     color: rgb(136, 123, 0);
 }
@@ -344,7 +424,7 @@ h3 {
     padding: 0 30px 0 20px;
 }
 
-.mensajeTxt > .negrita {
+.mensajeTxt>.negrita {
     margin-left: 10px;
 }
 
@@ -375,7 +455,8 @@ footer {
     position: fixed;
     bottom: 0;
 }
-footer > p {
+
+footer>p {
     color: #e0e0e0;
 }
 
@@ -388,10 +469,10 @@ footer > p {
 
     header,
     .contenedor_section,
-    main > h3,
+    main>h3,
     .producido,
-    .base > h2,
-    .base > table > thead,
+    .base>h2,
+    .base>table>thead,
     .btn__imprimir,
     .mensajes,
     footer {
@@ -414,7 +495,7 @@ footer > p {
         font-size: 14px;
     }
 
-    .base > table {
+    .base>table {
         border: none;
         color: #202020;
     }
@@ -434,7 +515,7 @@ footer > p {
         text-align: center;
     }
 
-    .caja_resultado--base > .total {
+    .caja_resultado--base>.total {
         text-decoration: none;
     }
 
@@ -443,6 +524,3 @@ footer > p {
     }
 
 }
-
-
-

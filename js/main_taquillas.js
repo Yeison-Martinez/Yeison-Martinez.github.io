@@ -416,43 +416,58 @@ function calc() {
         superior.innerHTML =  `$ ${sobrante_s}`;
     }
 
-    var mostrar__fila100k = document.getElementById("mostrar__fila100k");
-    var mostrar__fila50k = document.getElementById("mostrar__fila50k");
-    var mostrar__fila20k = document.getElementById("mostrar__fila20k");
-    var mostrar__fila10k = document.getElementById("mostrar__fila10k");
-    var mostrar__fila5k = document.getElementById("mostrar__fila5k");
-    var mostrar__fila2k = document.getElementById("mostrar__fila2k");
-    var mostrar__fila1k = document.getElementById("mostrar__fila1k");
+    const mostrar__fila100k1 = document.getElementById("fila100k_base1");
+    const mostrar__fila100k2 = document.getElementById("fila100k_base2");
+    const mostrar__fila100k3 = document.getElementById("fila100k_base3");
+    mostrar__fila100k1.classList.remove("show_base");
+    mostrar__fila100k2.classList.remove("show_base");
+    mostrar__fila100k3.classList.remove("show_base");
 
-    mostrar__fila100k.classList.remove("show_base");
-    mostrar__fila50k.classList.remove("show_base");
-    mostrar__fila20k.classList.remove("show_base");
-    mostrar__fila10k.classList.remove("show_base");
-    mostrar__fila5k.classList.remove("show_base");
-    mostrar__fila2k.classList.remove("show_base");
-    mostrar__fila1k.classList.remove("show_base");
+    // var mostrar__fila50k = document.getElementById("mostrar__fila20k");
+    // var mostrar__fila20k = document.getElementById("mostrar__fila20k");
+    // var mostrar__fila10k = document.getElementById("mostrar__fila10k");
+    // var mostrar__fila5k = document.getElementById("mostrar__fila5k");
+    // var mostrar__fila2k = document.getElementById("mostrar__fila2k");
+    // var mostrar__fila1k = document.getElementById("mostrar__fila1k");
+
+    mostrar__fila100k1.classList.remove("show_base");
+    mostrar__fila100k2.classList.remove("show_base");
+    mostrar__fila100k3.classList.remove("show_base");
+
+    // mostrar__fila50k.classList.remove("show_base");
+    // mostrar__fila20k.classList.remove("show_base");
+    // mostrar__fila10k.classList.remove("show_base");
+    // mostrar__fila5k.classList.remove("show_base");
+    // mostrar__fila2k.classList.remove("show_base");
+    // mostrar__fila1k.classList.remove("show_base");
+
+   
+
 
     if (bill100_b === 0) {
-        mostrar__fila100k.classList.add("show_base");
+        console.log(bill100_b);
+        mostrar__fila100k1.classList.add("show_base");
+        mostrar__fila100k2.classList.add("show_base");
+        mostrar__fila100k3.classList.add("show_base");
     }
-    if (bill50_b === 0) {
-        mostrar__fila50k.classList.add("show_base");
-    }
-    if (bill20_b === 0) {
-        mostrar__fila20k.classList.add("show_base");
-    }
-    if (bill10_b === 0) {
-        mostrar__fila10k.classList.add("show_base");
-    }
-    if (bill5_b === 0) {
-        mostrar__fila5k.classList.add("show_base");
-    }
-    if (bill2_b === 0) {
-        mostrar__fila2k.classList.add("show_base");
-    }
-    if (bill1_b === 0) {
-        mostrar__fila1k.classList.add("show_base");
-    }
+    // if (bill50_b === 0) {
+    //     mostrar__fila50k.classList.add("show_base");
+    // }
+    // if (bill20_b === 0) {
+    //     mostrar__fila20k.classList.add("show_base");
+    // }
+    // if (bill10_b === 0) {
+    //     mostrar__fila10k.classList.add("show_base");
+    // }
+    // if (bill5_b === 0) {
+    //     mostrar__fila5k.classList.add("show_base");
+    // }
+    // if (bill2_b === 0) {
+    //     mostrar__fila2k.classList.add("show_base");
+    // }
+    // if (bill1_b === 0) {
+    //     mostrar__fila1k.classList.add("show_base");
+    // }
 }
 
 function imprimir() {
