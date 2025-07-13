@@ -15,7 +15,13 @@ function calc_gmf() {
     console.log(vlr_bono);
 
     if (isNaN(vlr_bono) || vlr_bono <= 4999) {
-        alert('El valor del bono debe ser mayor o igual a $ 5.000');
+        // alert('El valor del bono debe ser mayor o igual a $ 5.000');
+        Swal.fire({
+            icon: "error",
+            title: "ERROR",
+            text: "El valor del bono debe ser mayor o igual a $ 5.000",
+            footer: '<i class="fa-solid fa-circle-xmark"></i> Valida los datos ingresados!'
+        });
         } else {
 
         var vlr_gmf_uno = vlr_bono * 0.004;
