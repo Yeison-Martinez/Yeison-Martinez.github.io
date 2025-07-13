@@ -1,4 +1,11 @@
 
+const VLR_BOLETA_UNO = 10000;
+const VLR_BOLETA_DOS = 30000;
+const VLR_BOLETA_TRES = 0;
+
+const VLR_BASE = 500000;
+
+
 var input = document.getElementsByClassName("input");
 var ttl_cant50 = document.getElementById("ttl_cant50");
 var ttl_cant20 = document.getElementById("ttl_cant20");
@@ -92,8 +99,12 @@ boton.addEventListener('click', calc);
 function calc() {
 
     // MOSTRAR CONTENEDOR DE RESULTADOS
-    var cajaResultado = document.getElementById("resultado");
-    cajaResultado.classList.add("showResult");
+    const cajaProducido = document.getElementById("producido");
+    const cajaBase = document.getElementById("base");
+    const btnImprimir = document.getElementById("btn__imprimir");
+    cajaProducido.classList.add("showResult");
+    cajaBase.classList.add("showResult");
+    btnImprimir.classList.add("showResult");
 
 
     // BILLETES DE 100K
@@ -150,15 +161,15 @@ function calc() {
     var sum_plas_s = Separador(sum_plas);
     ttl_plas.innerHTML = `$ ${sum_plas_s}`;
 
-    // TOTAL BOLETAS DE 22K
+    // TOTAL BOLETAS VLR UNO
     var cant22k = parseFloat(document.getElementById("cant22k").value);
-    var vlr_b22 = cant22k * 22000;
+    var vlr_b22 = cant22k * VLR_BOLETA_UNO;
     var vlr_b22_s = Separador(vlr_b22);
     ttl_cant22k.innerHTML = `$ ${vlr_b22_s}`;
 
-    // TOTAL BOLETAS DE 50K
+    // TOTAL BOLETAS VLR DOS
     var cant50k = parseFloat(document.getElementById("cant50k").value);
-    var vlr_b50 = cant50k * 50000;
+    var vlr_b50 = cant50k * VLR_BOLETA_DOS;
     var vlr_b50_s = Separador(vlr_b50);
     ttl_cant50k.innerHTML = `$ ${vlr_b50_s}`;
 
@@ -370,8 +381,8 @@ function calc() {
     var sum_billB = (bill100b + bill50b + bill20b + bill10b + bill5b + bill2b + bill1b);
     var sum_billB_s = Separador(sum_billB);
     ttl_billB.innerHTML = `$ ${sum_billB_s}`;
-    var ttl_billB_imp = document.getElementById("ttl_billB_imp");
-    ttl_billB_imp.innerHTML = `$ ${sum_billB_s}`;
+    // var ttl_billB_imp = document.getElementById("ttl_billB_imp");
+    // ttl_billB_imp.innerHTML = `$ ${sum_billB_s}`;
 
     mensajeFaltante.classList.remove("show");
     mensajeCuadrado.classList.remove("show");
@@ -383,9 +394,9 @@ function calc() {
 
 
     //  MONTRAR MENSAJES DE ALERTA 
-    if ((sum_bol + 500000) > sum_din) {
+    if ((sum_bol + VLR_BASE) > sum_din) {
         mensajeFaltante.classList.add("show");
-        var faltante = (sum_bol + 500000) - sum_din;
+        var faltante = (sum_bol + VLR_BASE) - sum_din;
         var faltante_s = Separador(faltante);
         Swal.fire({
             icon: "error",
@@ -394,7 +405,7 @@ function calc() {
             footer: '<i class="fa-solid fa-circle-xmark"></i> Valida los datos ingresados!'
         });
         mala.innerHTML = `$ ${faltante_s}`;
-    } else if ((sum_bol + 500000) === sum_din) {
+    } else if ((sum_bol + VLR_BASE) === sum_din) {
         Swal.fire({
             position: "center",
             icon: "success",
@@ -403,9 +414,9 @@ function calc() {
             timer: 3000
         });
         mensajeCuadrado.classList.add("show");
-    } else if ((sum_bol + 500000) < sum_din) {
+    } else if ((sum_bol + VLR_BASE) < sum_din) {
         mensajeSobrante.classList.add("show");
-        var sobrante = sum_din - (sum_bol + 500000);
+        var sobrante = sum_din - (sum_bol + VLR_BASE);
         var sobrante_s = Separador(sobrante);   
         Swal.fire({
             icon: "warning",
@@ -416,58 +427,83 @@ function calc() {
         superior.innerHTML =  `$ ${sobrante_s}`;
     }
 
-    const mostrar__fila100k1 = document.getElementById("fila100k_base1");
-    const mostrar__fila100k2 = document.getElementById("fila100k_base2");
-    const mostrar__fila100k3 = document.getElementById("fila100k_base3");
-    mostrar__fila100k1.classList.remove("show_base");
-    mostrar__fila100k2.classList.remove("show_base");
-    mostrar__fila100k3.classList.remove("show_base");
 
-    // var mostrar__fila50k = document.getElementById("mostrar__fila20k");
-    // var mostrar__fila20k = document.getElementById("mostrar__fila20k");
-    // var mostrar__fila10k = document.getElementById("mostrar__fila10k");
-    // var mostrar__fila5k = document.getElementById("mostrar__fila5k");
-    // var mostrar__fila2k = document.getElementById("mostrar__fila2k");
-    // var mostrar__fila1k = document.getElementById("mostrar__fila1k");
-
-    mostrar__fila100k1.classList.remove("show_base");
-    mostrar__fila100k2.classList.remove("show_base");
-    mostrar__fila100k3.classList.remove("show_base");
-
-    // mostrar__fila50k.classList.remove("show_base");
-    // mostrar__fila20k.classList.remove("show_base");
-    // mostrar__fila10k.classList.remove("show_base");
-    // mostrar__fila5k.classList.remove("show_base");
-    // mostrar__fila2k.classList.remove("show_base");
-    // mostrar__fila1k.classList.remove("show_base");
-
-   
+    // MOSTRAR FILAS DE BILLETES PARA LA BASE
+    const mostrar__fila100k = document.getElementById("fila100k_base");
+    const mostrar__fila50k = document.getElementById("fila50k_base");
+    const mostrar__fila20k = document.getElementById("fila20k_base");
+    const mostrar__fila10k = document.getElementById("fila10k_base");
+    const mostrar__fila5k = document.getElementById("fila5k_base");
+    const mostrar__fila2k = document.getElementById("fila2k_base");
+    const mostrar__fila1k = document.getElementById("fila1k_base");
+    mostrar__fila100k.classList.remove("show_base");
+    mostrar__fila50k.classList.remove("show_base");
+    mostrar__fila20k.classList.remove("show_base");
+    mostrar__fila10k.classList.remove("show_base");
+    mostrar__fila5k.classList.remove("show_base");
+    mostrar__fila2k.classList.remove("show_base");
+    mostrar__fila1k.classList.remove("show_base");
 
 
     if (bill100_b === 0) {
-        console.log(bill100_b);
-        mostrar__fila100k1.classList.add("show_base");
-        mostrar__fila100k2.classList.add("show_base");
-        mostrar__fila100k3.classList.add("show_base");
+        mostrar__fila100k.classList.add("show_base");
     }
-    // if (bill50_b === 0) {
-    //     mostrar__fila50k.classList.add("show_base");
-    // }
-    // if (bill20_b === 0) {
-    //     mostrar__fila20k.classList.add("show_base");
-    // }
-    // if (bill10_b === 0) {
-    //     mostrar__fila10k.classList.add("show_base");
-    // }
-    // if (bill5_b === 0) {
-    //     mostrar__fila5k.classList.add("show_base");
-    // }
-    // if (bill2_b === 0) {
-    //     mostrar__fila2k.classList.add("show_base");
-    // }
-    // if (bill1_b === 0) {
-    //     mostrar__fila1k.classList.add("show_base");
-    // }
+    if (bill50_b === 0) {
+        mostrar__fila50k.classList.add("show_base");
+    }
+    if (bill20_b === 0) {
+        mostrar__fila20k.classList.add("show_base");
+    }
+    if (bill10_b === 0) {
+        mostrar__fila10k.classList.add("show_base");
+    }
+    if (bill5_b === 0) {
+        mostrar__fila5k.classList.add("show_base");
+    }
+    if (bill2_b === 0) {
+        mostrar__fila2k.classList.add("show_base");
+    }
+    if (bill1_b === 0) {
+        mostrar__fila1k.classList.add("show_base");
+    }
+
+    // MOSTRAR FILAS DE BILLETES PARA EL PRODUCIDO
+    const mostrar__fila100k_p = document.getElementById("fila100k_producido");
+    const mostrar__fila50k_p = document.getElementById("fila50k_producido");
+    const mostrar__fila20k_p = document.getElementById("fila20k_producido");
+    const mostrar__fila10k_p = document.getElementById("fila10k_producido");
+    const mostrar__fila5k_p = document.getElementById("fila5k_producido");
+    const mostrar__fila2k_p = document.getElementById("fila2k_producido");
+    const mostrar__fila1k_p = document.getElementById("fila1k_producido");
+    mostrar__fila100k_p.classList.remove("show_base");
+    mostrar__fila50k_p.classList.remove("show_base");
+    mostrar__fila20k_p.classList.remove("show_base");
+    mostrar__fila10k_p.classList.remove("show_base");
+    mostrar__fila5k_p.classList.remove("show_base");
+    mostrar__fila2k_p.classList.remove("show_base");
+    mostrar__fila1k_p.classList.remove("show_base");    
+
+    if (paso3 === 0) {
+        mostrar__fila100k_p.classList.add("show_base");
+    }
+    if (paso7 === 0) {
+        mostrar__fila50k_p.classList.add("show_base");
+    }
+    if (paso11 === 0) {
+        mostrar__fila20k_p.classList.add("show_base");
+    }
+    if (paso15 === 0) {
+        mostrar__fila10k_p.classList.add("show_base");
+    }
+    if (paso19 === 0) {
+        mostrar__fila5k_p.classList.add("show_base");
+    }
+    if (paso23 === 0) {
+        mostrar__fila2k_p.classList.add("show_base");
+    }
+    if (paso27 === 0) {    
+        mostrar__fila1k_p.classList.add("show_base");
+    }
 }
 
 function imprimir() {
