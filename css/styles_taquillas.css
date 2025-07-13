@@ -179,18 +179,6 @@ main {
     outline-offset: -2px;
 }
 
-/* .total_efectivo>table,
-.producido>table,
-.base>table {
-    width: 80%;
-    margin: 10px auto;
-    text-align: center;
-    border: 1px solid #d8d8d8;
-    color: #646464;
-} */
-
-
-
 .contenedor_resultado {
     display: flex;
     gap: 15px;
@@ -249,10 +237,6 @@ main {
     display: flex;
     flex-direction: column;
 }
-
-/* .total_plastico>h2 {
-    margin-bottom: 10px;
-} */
 
 .contenedor_plastico {
     color: #646464;
@@ -340,15 +324,10 @@ h3 {
     gap: 15px;
 }
 
-
-
-
-
 .total_producido {
     background-color: #ffffff;
     background-image:
         linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
-        /* Degradado oscuro */
         url('../images/y_white.png');
     background-size: cover;
     background-position: center;
@@ -525,6 +504,7 @@ h3 {
     display: none;
 }
 
+/* PENDIENTE  */
 .show_base-imp {
     /* display: none; */
     /* visibility: hidden; */
