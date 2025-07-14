@@ -548,7 +548,7 @@ footer>p {
     }
 
     .total_producido {
-        width: 500px;
+        width: 450px;
         padding: 8px;
         box-shadow: none;
         border-radius: 0;
@@ -561,7 +561,7 @@ footer>p {
     }
 
     .table_item {
-        font-size: 1.8em;
+        font-size: 1.6em;
         color: #171717;
     }
 
