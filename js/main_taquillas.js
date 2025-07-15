@@ -1,9 +1,15 @@
 
 const VLR_BOLETA_UNO = 10000;
 const VLR_BOLETA_DOS = 30000;
-const VLR_BOLETA_TRES = 0;
+const VLR_BOLETA_TRES = 40000;
+const VLR_BOLETA_CUATRO = 50000;
 
-const VLR_BASE = 500000;
+const VLR_BASE = 300000;
+
+const cantVlr_tres = document.getElementById("cantVlr_tres");
+const cantVlr_cuatro = document.getElementById("cantVlr_cuatro");
+const ttl_cantVlr_tres = document.getElementById("ttl_cantVlr_tres");
+const ttl_cantVlr_cuatro = document.getElementById("ttl_cantVlr_cuatro");
 
 
 var input = document.getElementsByClassName("input");
@@ -173,8 +179,20 @@ function calc() {
     var vlr_b50_s = Separador(vlr_b50);
     ttl_cant50k.innerHTML = `$ ${vlr_b50_s}`;
 
+    // TOTAL VLR TRES
+    const cantVlrTres = parseFloat(document.getElementById("cantVlr_tres").value);
+    const vlr_bTres = cantVlrTres * VLR_BOLETA_TRES;
+    var vlr_bTres_s = Separador(vlr_bTres);
+    ttl_cantVlr_tres.innerHTML = `$ ${vlr_bTres_s}`;
+
+    // TOTAL VLR TRES
+    const cantVlrCuatro = parseFloat(document.getElementById("cantVlr_cuatro").value);
+    const vlr_bCuatro = cantVlrTres * VLR_BOLETA_TRES;
+    var vlr_bCuatro_s = Separador(vlr_bCuatro);
+    ttl_cantVlr_cuatro.innerHTML = `$ ${vlr_bCuatro_s}`;
+
     // PRODUCIDO TOTAL
-    var sum_bol = vlr_b50 + vlr_b22;
+    const sum_bol = vlr_b50 + vlr_b22 + vlr_bTres + vlr_bCuatro;
     var sum_bol_s = Separador(sum_bol);
     ttl_cantB.innerHTML = `$ ${sum_bol_s}`;
 
