@@ -185,9 +185,9 @@ function calc() {
     var vlr_bTres_s = Separador(vlr_bTres);
     ttl_cantVlr_tres.innerHTML = `$ ${vlr_bTres_s}`;
 
-    // TOTAL VLR TRES
+    // TOTAL VLR CUATRO
     const cantVlrCuatro = parseFloat(document.getElementById("cantVlr_cuatro").value);
-    const vlr_bCuatro = cantVlrTres * VLR_BOLETA_TRES;
+    const vlr_bCuatro = cantVlrTres * VLR_BOLETA_CUATRO;
     var vlr_bCuatro_s = Separador(vlr_bCuatro);
     ttl_cantVlr_cuatro.innerHTML = `$ ${vlr_bCuatro_s}`;
 
