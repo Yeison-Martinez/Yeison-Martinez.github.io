@@ -10,17 +10,15 @@ main {
 }
 
 .contenedor {
-    background-color: rgb(219, 219, 219);
     width: 100%;
-    padding: 20px;
 
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 .contenedor > .flex_uno,
 .contenedor > .flex_dos {
-    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     padding: 20px;
     border-radius: 8px;
 }
