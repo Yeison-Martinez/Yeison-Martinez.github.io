@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taquilla 2 Caja 3</title>
+  <link rel="stylesheet" href="../css/styles_taquillas.css" />
+
+  <!-- ICONO -->
+  <link rel="shortcut icon" href="../images/y_white.png" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+  <header>
+    <div class="contenedor_header">
+      <div class="nombre_evento">
+        <h1>Mundo Flores 2025</h1>
+        <span>(15 Jul - 31 Ago)</span>
+      </div>
+      <div class="info_evento">
+        <p class="fecha">
+          <i class="fa-regular fa-calendar"></i>
+          <span id="fecha_actual"></span>
+        </p>
+        <p><i class="fa-solid fa-inbox"></i> Taquilla 2 Caja 3</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contenedor_section">
+      <div class="contenedor_uno">
+
+
+        <article class="total_efectivo">
+          <h2>Efectivo</h2>
+
+          <div class="parent">
+            <div class="grid_item grid_title">Denominación</div>
+            <div class="grid_item grid_title">Cantidad</div>
+            <div class="grid_item grid_title">Total</div>
+
+            <div class="grid_item">$ 100.000</div>
+            <div class="grid_item"><input type="number" id="bill100" value="0" autofocus /></div>
+            <div class="grid_item"><span id="ttl_cant100">$</span></div>
+
+            <div class="grid_item">$ 50.000</div>
+            <div class="grid_item"><input type="number" id="bill50" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cant50">$</span></div>
+
+            <div class="grid_item">$ 20.000</div>
+            <div class="grid_item"><input type="number" id="bill20" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cant20">$</span></div>
+
+            <div class="grid_item">$ 10.000</div>
+            <div class="grid_item"><input type="number" id="bill10" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cant10">$</span></div>
+
+            <div class="grid_item">$ 5.000</div>
+            <div class="grid_item"><input type="number" id="bill5" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cant5">$</span></div>
+
+            <div class="grid_item">$ 2.000</div>
+            <div class="grid_item"><input type="number" id="bill2" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cant2">$</span></div>
+
+            <div class="grid_item">$ 1.000</div>
+            <div class="grid_item"><input type="number" id="bill1" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cant1">$</span></div>
+
+            <div class="grid_item total grid_subtitle">Total Efectivo</div>
+            <div class="grid_item grid_subtitle"><span class="total" id="ttl_bill">$</span></div>
+          </div>
+        </article>
+
+
+        <article class="total_plastico">
+          <h2>Plástico</h2>
+          <div class="contenedor_plastico">
+            <div class="grid_item ">Débito</div>
+            <div class="grid_item"><input type="number" id="tarj_deb--vlr" value="0" /></div>
+
+            <div class="grid_item ">Crédito</div>
+            <div class="grid_item"><input type="number" id="tarj_cre--vlr" value="0" /></div>
+
+            <div class="grid_item grid_subtitle">Total en plástico</div>
+            <div class="grid_item grid_subtitle"><span class="total" id="ttl_plas">$</span></div>
+
+          </div>
+        </article>
+
+
+        <article class="total_boletas">
+          <h2>Boletas <span class="taq">Taquilla 2 Caja 3</span></h2>
+
+          <div class="parent_boletas">
+            <div class="grid_item grid_title">Denominación</div>
+            <div class="grid_item grid_title">Cantidad</div>
+            <div class="grid_item grid_title">Total</div>
+
+            <div class="grid_item">$ 30.000</div>
+            <div class="grid_item"><input type="number" id="cant50k" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cant50k">$</span></div>
+
+            <div class="grid_item">$ 10.000</div>
+            <div class="grid_item"><input type="number" id="cant22k" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cant22k">$</span></div>
+
+            <div class="grid_item total grid_subtitle">Producido del día</div>
+            <div class="grid_item grid_subtitle"><span class="total" id="ttl_cant--b">$</span></div>
+          </div>
+
+        </article>
+
+        <div class="contenedor_boton">
+          <button id="calcular">
+            <i class="fa-regular fa-circle-check"></i> Calcular Base
+          </button>
+        </div>
+      </div>
+
+      <div class="contenedor_dos">
+
+
+        <article class="total_producido producido" id="producido">
+          <h2>Dinero para el producido</h2>
+
+          <div class="table_producido">
+
+            <div class="table_container table_header">
+              <div class="table_item table_title fw-bold py-2">Denominación</div>
+              <div class="table_item table_title fw-bold py-2">Cantidad</div>
+              <div class="table_item table_title fw-bold py-2">Total</div>
+            </div>
+
+            <div class="table_container" id="fila100k_producido">
+              <div class="table_item">$ 100.000</div>
+              <div class="table_item"><span class="" id="can100_p">0</span></div>
+              <div class="table_item"><span id="ttl100_p">$</span></div>
+            </div>
+
+            <div class="table_container" id="fila50k_producido">
+              <div class="table_item">$ 50.000</div>
+              <div class="table_item"><span class="" id="can50_p">0</span></div>
+              <div class="table_item"><span id="ttl50_p">$</span></div>
+            </div>
+
+            <div class="table_container" id="fila20k_producido">
+              <div class="table_item">$ 20.000</div>
+              <div class="table_item"><span class="" id="can20_p">0</span></div>
+              <div class="table_item"><span id="ttl20_p">$</span></div>
+            </div>
+
+            <div class="table_container" id="fila10k_producido">
+              <div class="table_item">$ 10.000</div>
+              <div class="table_item"><span class="" id="can10_p">0</span></div>
+              <div class="table_item"><span id="ttl10_p">$</span></div>
+            </div>
+
+            <div class="table_container" id="fila5k_producido">
+              <div class="table_item">$ 5.000</div>
+              <div class="table_item"><span class="" id="can5_p">0</span></div>
+              <div class="table_item"><span id="ttl5_p">$</span></div>
+            </div>
+
+            <div class="table_container" id="fila2k_producido">
+              <div class="table_item">$ 2.000</div>
+              <div class="table_item"><span class="" id="can2_p">0</span></div>
+              <div class="table_item"><span id="ttl2_p">$</span></div>
+            </div>
+
+            <div class="table_container" id="fila1k_producido">
+              <div class="table_item">$ 1.000</div>
+              <div class="table_item"><span class="" id="can1_p">0</span></div>
+              <div class="table_item"><span id="ttl1_p">$</span></div>
+            </div>
+
+            <div class="table_container container_total">
+              <div class="table_item table_total fw-bold">Total Producido</div>
+              <div class="table_item"><span class="total fw-bold" id="ttl_billP">$</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="total_producido base" id="base">
+          <h2>Dinero para la base </h2>
+          <div class="infor_taquilla">
+            <h4 id="fecha_imprimir"></h4>
+            <h2 id="">Taq 2 Caja 3</h2>
+          </div>
+
+          <div class="table_producido">
+            <div class="table_container table_header">
+              <div class="table_item grid_title fw-bold">Denominación</div>
+              <div class="table_item grid_title fw-bold">Cantidad</div>
+              <div class="table_item grid_title fw-bold">Total</div>
+            </div>
+            <div class="table_container" id="fila100k_base">
+              <div class="table_item" id="fila100k_base1">$ 100.000</div>
+              <div class="table_item" id="fila100k_base2"><span id="can100_b">0</span></div>
+              <div class="table_item" id="fila100k_base3"><span id="ttl100_b">$</span></div>
+            </div>
+            <div class="table_container"  id="fila50k_base">
+              <div class="table_item fila50k_base">$ 50.000</div>
+              <div class="table_item fila50k_base"><span id="can50_b">0</span></div>
+              <div class="table_item fila50k_base"><span id="ttl50_b">$</span></div>
+            </div>
+            <div class="table_container"  id="fila20k_base">
+              <div class="table_item">$ 20.000</div>
+              <div class="table_item"><span id="can20_b">0</span></div>
+              <div class="table_item"><span id="ttl20_b">$</span></div>
+            </div>
+            <div class="table_container"  id="fila10k_base">
+              <div class="table_item">$ 10.000</div>
+              <div class="table_item"><span id="can10_b">0</span></div>
+              <div class="table_item"><span id="ttl10_b">$</span></div>
+            </div>
+            <div class="table_container"  id="fila5k_base">
+              <div class="table_item">$ 5.000</div>
+              <div class="table_item"><span id="can5_b">0</span></div>
+              <div class="table_item"><span id="ttl5_b">$</span></div>
+            </div>
+            <div class="table_container"  id="fila2k_base">
+              <div class="table_item">$ 2.000</div>
+              <div class="table_item"><span id="can2_b">0</span></div>
+              <div class="table_item"><span id="ttl2_b">$</span></div>
+            </div>
+            <div class="table_container"  id="fila1k_base">
+              <div class="table_item">$ 1.000</div>
+              <div class="table_item"><span id="can1_b">0</span></div>
+              <div class="table_item"><span id="ttl1_b">$</span></div>
+            </div>
+            <div class="table_container container_total">
+              <div class="table_item table_total table_subtitle fw-bold">Total Base</div>
+              <div class="table_item grid_subtitle"><span class="fw-bold" id="ttl_billB">$</span></div>
+            </div>
+          </div>
+        </article>
+
+        <button class="btn__imprimir" id="btn__imprimir" onclick="imprimir()" title="Imprimir Base">
+          <i class="fa-solid fa-print"></i> Imprimir Base
+        </button>
+
+      </div>
+    </section>
+
+    <h3><input type="hidden" name="" id="ttl_dinero" /></h3>
+
+    
+  </main>
+
+  <div class="mensajes mensajeFaltante" id="mensajeFaltante">
+    <div class="mensajeIcon">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+    </div>
+    <p class="mensajeTxt">
+      <span id="mala" class="negrita">$</span>
+    </p>
+  </div>
+
+  <div class="mensajes mensajeCuadrado" id="mensajeCuadrado">
+    <div class="mensajeIcon">
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+    <p class="mensajeTxt negrita">
+      OK <span id="cuadrada" class="negrita"></span>
+    </p>
+  </div>
+
+  <div class="mensajes mensajeSobrante" id="mensajeSobrante">
+    <div class="mensajeIcon">
+      <i class="fa-solid fa-circle-info"></i>
+    </div>
+    <p class="mensajeTxt">
+      <span id="superior" class="negrita"> $ </span>
+    </p>
+  </div>
+
+  <footer>
+    <p>Yeison Martinez | 2025</p>
+  </footer>
+
+  <script src="../js/main_taquillas.js"></script>
+</body>
+
+</html>
