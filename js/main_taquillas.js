@@ -6,8 +6,8 @@ const VLR_BOLETA_CUATRO = 50000;
 
 const VLR_BASE = 300000;
 
-const cantVlr_tres = document.getElementById("cantVlr_tres");
-const cantVlr_cuatro = document.getElementById("cantVlr_cuatro");
+// const cantVlr_tres = document.getElementById("cantVlr_tres");
+// const cantVlr_cuatro = document.getElementById("cantVlr_cuatro");
 const ttl_cantVlr_tres = document.getElementById("ttl_cantVlr_tres");
 const ttl_cantVlr_cuatro = document.getElementById("ttl_cantVlr_cuatro");
 
