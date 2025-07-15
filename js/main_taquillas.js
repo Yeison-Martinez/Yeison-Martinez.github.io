@@ -392,11 +392,17 @@ function calc() {
     cuadrada.innerHTML = ``;
     superior.innerHTML = ``;
 
+    const sumBoletas_vlrBase = sum_bol + VLR_BASE;
+    const contenedor_base = document.getElementById("base");
+
+    contenedor_base.classList.remove("bs-red");
+    contenedor_base.classList.remove("bs-yellow");
+    contenedor_base.classList.remove("bs-gray");
 
     //  MONTRAR MENSAJES DE ALERTA 
-    if ((sum_bol + VLR_BASE) > sum_din) {
+    if (sumBoletas_vlrBase > sum_din) {
         mensajeFaltante.classList.add("show");
-        var faltante = (sum_bol + VLR_BASE) - sum_din;
+        var faltante = sumBoletas_vlrBase - sum_din;
         var faltante_s = Separador(faltante);
         Swal.fire({
             icon: "error",
@@ -405,7 +411,8 @@ function calc() {
             footer: '<i class="fa-solid fa-circle-xmark"></i> Valida los datos ingresados!'
         });
         mala.innerHTML = `$ ${faltante_s}`;
-    } else if ((sum_bol + VLR_BASE) === sum_din) {
+        contenedor_base.classList.add("bs-red");
+    } else if (sumBoletas_vlrBase === sum_din) {
         Swal.fire({
             position: "center",
             icon: "success",
@@ -414,9 +421,10 @@ function calc() {
             timer: 3000
         });
         mensajeCuadrado.classList.add("show");
-    } else if ((sum_bol + VLR_BASE) < sum_din) {
+        contenedor_base.classList.add("bs-gray");
+    } else if (sumBoletas_vlrBase < sum_din) {
         mensajeSobrante.classList.add("show");
-        var sobrante = sum_din - (sum_bol + VLR_BASE);
+        var sobrante = sum_din - sumBoletas_vlrBase;
         var sobrante_s = Separador(sobrante);   
         Swal.fire({
             icon: "warning",
@@ -425,8 +433,13 @@ function calc() {
             footer: '<i class="fa-solid fa-circle-info"></i> Valida los datos ingresados!'
         });
         superior.innerHTML =  `$ ${sobrante_s}`;
+        contenedor_base.classList.add("bs-yellow");
     }
 
+    // OCULTAR BOTON DE IMPRIMIR SI LA BASE ES MAYOR A 500K O MENOR A 500K
+    if (sumBoletas_vlrBase != sum_din) {
+        btnImprimir.classList.remove("showResult");
+    }
 
     // MOSTRAR FILAS DE BILLETES PARA LA BASE
     const mostrar__fila100k = document.getElementById("fila100k_base");
