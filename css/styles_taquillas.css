@@ -89,7 +89,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 50%;
+    width: 60%;
 }
 
 .total_efectivo {
@@ -232,7 +232,7 @@ h2 > .taq {
 }
 
 .contenedor_dos {
-    width: 50%;
+    width: 40%;
 
     display: flex;
     flex-direction: column;
