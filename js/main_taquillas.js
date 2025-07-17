@@ -188,7 +188,7 @@ function calc() {
 
     // TOTAL VLR CUATRO
     const cantVlrCuatro = parseFloat(document.getElementById("cantVlr_cuatro").value);
-    const vlr_bCuatro = cantVlrCuatro * VLR_BOLETA_CUATRO;
+    const vlr_bCuatro = cantVlrCuatro * VLR_BOLETA_TRES;
     var vlr_bCuatro_s = Separador(vlr_bCuatro);
     ttl_cantVlr_cuatro.innerHTML = `$ ${vlr_bCuatro_s}`;
     
