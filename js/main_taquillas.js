@@ -10,6 +10,7 @@ const VLR_BASE = 300000;
 // const cantVlr_cuatro = document.getElementById("cantVlr_cuatro");
 const ttl_cantVlr_tres = document.getElementById("ttl_cantVlr_tres");
 const ttl_cantVlr_cuatro = document.getElementById("ttl_cantVlr_cuatro");
+const ttl_cantVlr_cinco = document.getElementById("ttl_cantVlr_cinco");
 
 
 var input = document.getElementsByClassName("input");
@@ -190,9 +191,15 @@ function calc() {
     const vlr_bCuatro = cantVlrCuatro * VLR_BOLETA_CUATRO;
     var vlr_bCuatro_s = Separador(vlr_bCuatro);
     ttl_cantVlr_cuatro.innerHTML = `$ ${vlr_bCuatro_s}`;
+    
+    // TOTAL VLR CINCO
+    const cantVlrCinco = parseFloat(document.getElementById("cantVlr_cuatro").value);
+    const vlr_bCinco = cantVlrCinco * VLR_BOLETA_CUATRO;
+    var vlr_bCinco_s = Separador(vlr_bCinco);
+    ttl_cantVlr_cinco.innerHTML = `$ ${vlr_bCinco_s}`;
 
     // PRODUCIDO TOTAL
-    const sum_bol = vlr_b50 + vlr_b22 + vlr_bTres + vlr_bCuatro;
+    const sum_bol = vlr_b50 + vlr_b22 + vlr_bTres + vlr_bCuatro + vlr_bCinco;
     var sum_bol_s = Separador(sum_bol);
     ttl_cantB.innerHTML = `$ ${sum_bol_s}`;
 
