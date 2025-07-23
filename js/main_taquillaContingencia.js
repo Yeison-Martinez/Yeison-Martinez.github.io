@@ -4,7 +4,7 @@ const VLR_BOLETA_DOS = 30000;
 const VLR_BOLETA_TRES = 40000;
 const VLR_BOLETA_CUATRO = 50000;
 
-const VLR_BASE = 300000;
+const VLR_BASE = 200000;
 
 const ttl_cantVlr_tres = document.getElementById("ttl_cantVlr_tres");
 const ttl_cantVlr_cuatro = document.getElementById("ttl_cantVlr_cuatro");
