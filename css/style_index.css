@@ -1,4 +1,14 @@
 
+
+main {
+    height: calc(100vh - 150px);
+}
+
+main > h4 {
+    font-size: 1.6em;
+    color: #949494;
+}
+
 /* incio carrucel */
 .carousel {
     position: relative;
