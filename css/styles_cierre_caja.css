@@ -132,18 +132,21 @@ body {
 
 
 .contenedor {
+    width: 80%;
+    height: calc(100vh - 150px);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.contenedor > h4 {
+    font-size: 1.2em;
+    color: gray;
+}
+
 
 
 @media screen and (max-width: 800px) {
-    .contenedor {
-        flex-direction: column-reverse;
-        /* Cambia a apilamiento en columna */
-    }
 
     .contenedor__cuadros,
     .contenedor__formatos {
