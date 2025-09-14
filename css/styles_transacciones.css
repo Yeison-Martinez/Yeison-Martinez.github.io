@@ -35,6 +35,7 @@ main {
 
 .contenedor > .flex_uno > ul > li {
     padding: 5px;
+    font-size: .9em;
 }
 .contenedor > .flex_dos {
     background-color: rgb(255, 255, 255);
