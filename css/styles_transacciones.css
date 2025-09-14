@@ -54,7 +54,10 @@ main {
 
 .text-gray {
     color: #838383;
-    font-size: .8em;
+    font-size: .9em;
+}
+.text-gray > span {
+    font-size: .9em;
 }
 
 
