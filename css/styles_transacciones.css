@@ -50,17 +50,12 @@ main {
 
 .contenedor > .flex_dos > ul > li {
     padding: 5px;
+    font-size: .9em;
 }
 
 .text-gray {
     color: #838383;
-    font-size: .9em;
 }
-.text-gray > span {
-    font-size: .9em;
-}
-
-
 
 .ing_hgi {
     position: absolute;
