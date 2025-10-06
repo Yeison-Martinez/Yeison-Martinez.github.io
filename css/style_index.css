@@ -47,6 +47,7 @@ main > h4 {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 .slide h2 {
@@ -64,14 +65,26 @@ main > h4 {
 .slide-content > p {
     margin: 15px 0;
     font-size: 1.1em;
-    color: #808080;
+    color: #949494;
 }
 
 
 
-.slide .bold {
+.bold {
     font-weight: 600;
     color: #000;
+}
+
+p > .list-item {
+    background-color: #000;
+    color: white;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 100%;
+    margin: 5px 0;
+    text-align: center;
+    line-height: 20px;
 }
 
 .bg-price {
