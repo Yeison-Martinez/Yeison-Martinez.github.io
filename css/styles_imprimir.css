@@ -1,0 +1,120 @@
+
+main {
+    font-family: 'Signika Negative', sans-serif;
+    width: 95%;
+    margin: 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedor {
+    width: 100%;
+
+    display: flex;
+    gap: 20px;
+}
+
+.contenedor > .card {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border-radius: 8px;
+    width: 44%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: rgb(50, 50, 50);
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+.fd-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fd-row > .item_section > input {
+    width: 150px;
+}
+
+.card_section .item_section {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.item_section label {
+    color: rgb(212, 212, 212);
+}
+
+.item_section input,
+.item_section select {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 4px;
+    font-size: 1.2em;
+}
+
+.bottom {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgb(220, 220, 220);
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+}
+
+.btn_imprimir {
+    padding: 12px;
+    background-color: rgb(0, 131, 197);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+        background-color: rgb(0, 100, 150);
+        transform: scale(1.02);
+    }
+}
+
+.contendor_imprimir {
+    /* display: none; */
+    padding: 0;
+    margin: 0;
+}
+
+
+@media print {
+
+    header,
+    button,
+    .contenedor,
+    footer {
+        display: none;
+    }
+
+    h2 {
+        border: none;
+    }
+
+    .contendor_imprimir {
+        display: block;
+    }
+}
