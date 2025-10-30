@@ -141,6 +141,9 @@ h2 > .taq {
         ". . ."
         ". . ."
         ". . ."
+        ". . ."
+        ". . ."
+        ". . ."
         "total total .";
     grid-column-gap: 4px;
     grid-row-gap: 4px;
@@ -148,6 +151,10 @@ h2 > .taq {
 
 .total {
     grid-area: total;
+}
+
+.grid_separator {
+    grid-area: separator;
 }
 
 .parent>.grid_item,
@@ -280,6 +287,9 @@ h2 > .taq {
         ". . ."
         ". . ."
         ". . ."
+        "separator separator separator"
+        ". . ."
+        ". . ."
         "total total .";
     grid-column-gap: 4px;
     grid-row-gap: 4px;
@@ -309,7 +319,8 @@ h2 > .taq {
     color: white;
     padding: 10px 20px;
     border-radius: 6px;
-    font-weight: bold;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
     font-size: 1.2em;
     border: none;
     cursor: pointer;
@@ -339,7 +350,7 @@ h3 {
 .total_producido {
     background-color: #ffffff;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
         url('../images/y_white.png');
     background-size: cover;
     background-position: center;
@@ -360,7 +371,8 @@ h3 {
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1em;
-    font-weight: bold;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
     border: none;
     cursor: pointer;
     transition: background-color .3s ease, transform .2s ease;
