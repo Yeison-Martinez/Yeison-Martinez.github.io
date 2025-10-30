@@ -58,18 +58,20 @@
         <h2>Imprimir información</h2>
 
         <div class="card_section">
-          <div class="item_section">
-            <label for="">Ingrese su nombre</label>
-            <input type="text" placeholder="Nombre completo" id="nombreUsuario">
-          </div>
-          <div class="item_section">
-            <label for="">Seleccione la caja</label>
-            <select name="caja" id="caja">
-              <option value="" disabled selected>Seleccione...</option>
-              <option value="Taq 1 Caja 2">Taquilla 1 Caja 2</option>
-              <option value="Taq 2 Caja 3">Taquilla 2 Caja 3</option>
-              <option value="Taq Contingencia">Taquilla Contingencia</option>
-            </select>
+          <div class="fd-row">
+            <div class="item_section">
+              <label for="">Ingrese su nombre</label>
+              <input type="text" placeholder="Nombre completo" id="nombreUsuario" class="input_nombre">
+            </div>
+            <div class="item_section">
+              <label for="">Seleccione la caja</label>
+              <select name="caja" id="caja">
+                <option value="" disabled selected>Seleccione...</option>
+                <option value="Taq 1 Caja 2">Taquilla 1 Caja 2</option>
+                <option value="Taq 2 Caja 3">Taquilla 2 Caja 3</option>
+                <option value="Taq Contingencia">Taquilla Contingencia</option>
+              </select>
+            </div>
           </div>
           <div class="fd-row">
             <div class="item_section">
@@ -78,11 +80,11 @@
             </div>
             <div class="item_section">
               <label for="">Consecutivo Inicial</label>
-              <input type="number" placeholder="0000" id="consecutivoInicial1">
+              <input type="text" placeholder="0000" id="consecutivoInicial1">
             </div>
             <div class="item_section">
               <label for="">Consecutivo Final</label>
-              <input type="number" placeholder="0000" id="consecutivoFinal1">
+              <input type="text" placeholder="0000" id="consecutivoFinal1">
             </div>
             <div class="item_section">
               <label for="">Cantidad de boletas</label>
@@ -110,7 +112,7 @@
 
           <div class="bottom">
 
-            <button id="recopilarInfo" class="btn_imprimir">Recopilar datos</button>
+            <button id="recopilarInfo" class="btn">Recopilar datos</button>
             <button onclick="imprimirInfo()" id="botonImprimir" class="btn_imprimir">Imprimir</button>
           </div>
 
@@ -121,19 +123,23 @@
       
     </div>
     <div class="contendor_imprimir">
-      <h2 id="fechaActualI"></h2>
-      <h2 id="nombreI"></h2>
-      <h2 id="cajaI"></h2>
+      <div class="head">
+        <div class="info">
+          <h2 id="fechaActualI"></h2>
+          <h2 id="cajaI"></h2>
+        </div>
+        <h2 id="nombreI"></h2>
+      </div>
 
       <div class="boletas">
-        <p>BOLETAS DE <span id="valor1I"></span> </p>
-        <p><span id="consecutivoInicial1I"></span> A LA <span id="consecutivoFinal1I"></span></p>
-        <p><span id="cantidadBoletas1I"></span> BOLETAS </p>
+        <p>BOLETAS DE <span class="bold" id="valor1I"></span> </p>
+        <p><span class="bold" id="consecutivoInicial1I"></span> A LA <span class="bold" id="consecutivoFinal1I"></span></p>
+        <p><span class="bold" id="cantidadBoletas1I"></span> BOLETAS </p>
       </div>
       <div class="boletas">
-        <p>BOLETAS DE <span id="valor2I"></span> </p>
-        <p><span id="consecutivoInicial2I"></span> A LA <span id="consecutivoFinal2I"></span></p>
-        <p><span id="cantidadBoletas2I"></span> BOLETAS </p>
+        <p>BOLETAS DE <span class="bold" id="valor2I"></span> </p>
+        <p><span class="bold" id="consecutivoInicial2I"></span> A LA <span class="bold" id="consecutivoFinal2I"></span></p>
+        <p><span class="bold" id="cantidadBoletas2I"></span> BOLETAS </p>
       </div>
     </div>
 
