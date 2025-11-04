@@ -1,7 +1,7 @@
 const VLR_BOLETA_UNO = 22000; // 22.000
 const VLR_BOLETA_DOS = 50000; // 50.000
-const VLR_BOLETA_TRES = 17600; // 17.600
-const VLR_BOLETA_CUATRO = 40000; // 40.000
+const VLR_BOLETA_TRES = 0; // 17.600
+const VLR_BOLETA_CUATRO = 0; // 40.000
 
 const VLR_BASE = 500000;
 
@@ -220,20 +220,18 @@ function calc() {
   ttl_cant50k.innerHTML = `$ ${vlr_b50_s}`;
 
   // TOTAL VLR TRES
-  const cantVlrTres = parseFloat(document.getElementById("cantVlr_tres").value);
-  // const cantVlrTres = 0;
+  // const cantVlrTres = parseFloat(document.getElementById("cantVlr_tres").value);
+  const cantVlrTres = 0;
   const vlr_bTres = cantVlrTres * VLR_BOLETA_TRES;
   var vlr_bTres_s = Separador(vlr_bTres);
-  ttl_cantVlr_tres.innerHTML = `$ ${vlr_bTres_s}`;
+  // ttl_cantVlr_tres.innerHTML = `$ ${vlr_bTres_s}`;
 
   // TOTAL VLR CUATRO
-  const cantVlrCuatro = parseFloat(
-    document.getElementById("cantVlr_cuatro").value
-  );
-  // const cantVlrCuatro = 0;
+  // const cantVlrCuatro = parseFloat(document.getElementById("cantVlr_cuatro").value);
+  const cantVlrCuatro = 0;
   const vlr_bCuatro = cantVlrCuatro * VLR_BOLETA_CUATRO;
   var vlr_bCuatro_s = Separador(vlr_bCuatro);
-  ttl_cantVlr_cuatro.innerHTML = `$ ${vlr_bCuatro_s}`;
+  // ttl_cantVlr_cuatro.innerHTML = `$ ${vlr_bCuatro_s}`;
 
   // TOTAL VLR CINCO
   // const cantVlrCinco = parseFloat(document.getElementById("cantVlr_cinco").value);
