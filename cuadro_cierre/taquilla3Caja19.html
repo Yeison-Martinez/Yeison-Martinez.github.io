@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Taquilla 4 Caja 15</title>
+  <title>Taquilla 3 Caja 19</title>
   <link rel="stylesheet" href="../css/styles_taquillas.css" />
 
   <!-- ICONO -->
@@ -22,15 +22,15 @@
   <header>
     <div class="contenedor_header">
       <div class="nombre_evento">
-        <h1>Mundo Flores 2025</h1>
-        <span>(15 Jul - 31 Ago)</span>
+        <h1>Mundo Santa 2025</h1>
+        <span>(20 Nov - 18 Ene)</span>
       </div>
       <div class="info_evento">
         <p class="fecha">
           <i class="fa-regular fa-calendar"></i>
           <span id="fecha_actual"></span>
         </p>
-        <p><i class="fa-solid fa-inbox"></i> Taquilla 4 Caja 15</p>
+        <p><i class="fa-solid fa-inbox"></i> Taquilla 3 Caja 19</p>
       </div>
     </div>
   </header>
@@ -76,6 +76,18 @@
             <div class="grid_item"><input type="number" id="bill1" value="0" /></div>
             <div class="grid_item"><span id="ttl_cant1">$</span></div>
 
+            <div class="grid_item">$ 500</div>
+            <div class="grid_item"><input type="number" id="bill500m" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cant500m">$</span></div>
+
+            <div class="grid_item">$ 200</div>
+            <div class="grid_item"><input type="number" id="bill200m" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cant200m">$</span></div>
+
+            <div class="grid_item">$ 100</div>
+            <div class="grid_item"><input type="number" id="bill100m" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cant100m">$</span></div>
+
             <div class="grid_item total grid_subtitle">Total Efectivo</div>
             <div class="grid_item grid_subtitle"><span class="total" id="ttl_bill">$</span></div>
           </div>
@@ -99,33 +111,37 @@
 
 
         <article class="total_boletas">
-          <h2>Boletas <span class="taq">Taquilla 4 Caja 15</span></h2>
+          <h2>Boletas <span class="taq">Taquilla 3 Caja 19</span></h2>
 
           <div class="parent_boletas">
-            <div class="grid_item grid_title">Denominación</div>
+            <div class="grid_item grid_title">Producto</div>
             <div class="grid_item grid_title">Cantidad</div>
             <div class="grid_item grid_title">Total</div>
 
-              <div class="grid_item">Libro $ 50.000</div>
-            <div class="grid_item"><input type="number" id="cantVlr_cuatro" value="0" /></div>
-            <div class="grid_item"><span id="ttl_cantVlr_cuatro">$</span></div>
-            
-            <div class="grid_item">Combo Libro $ 40.000</div>
-            <div class="grid_item"><input type="number" id="cantVlr_tres" value="0" /></div>
-            <div class="grid_item"><span id="ttl_cantVlr_tres">$</span></div>
-            
-            <div class="grid_item">Libro Empleados $ 40.000</div>
+            <!-- DIFERENTES VALORES -->
+           
+            <!-- <div class="grid_item">Libro Empleados $ 40.000</div>
             <div class="grid_item"><input type="number" id="cantVlr_cinco" value="0" /></div>
-            <div class="grid_item"><span id="ttl_cantVlr_cinco">$</span></div>
+            <div class="grid_item"><span id="ttl_cantVlr_cinco">$</span></div> -->
 
-            <div class="grid_item">Boleta $ 30.000</div>
+            <div class="grid_item">Boleta $ 50.000</div>
             <div class="grid_item"><input type="number" id="cant50k" value="0" /></div>
             <div class="grid_item"><span id="ttl_cant50k">$</span></div>
 
-            <div class="grid_item">Boleta $ 10.000</div>
+            <div class="grid_item">Boleta $ 25.000</div>
             <div class="grid_item"><input type="number" id="cant22k" value="0" /></div>
             <div class="grid_item"><span id="ttl_cant22k">$</span></div>
-            
+
+            <!-- <div class="grid_item grid_subtitle grid_separator">Promoción 20%</div>
+
+            <div class="grid_item">Boleta $ 40.000</div>
+            <div class="grid_item"><input type="number" id="cantVlr_cuatro" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cantVlr_cuatro">$</span></div>
+
+            <div class="grid_item">Boleta $ 17.600</div>
+            <div class="grid_item"><input type="number" id="cantVlr_tres" value="0" /></div>
+            <div class="grid_item"><span id="ttl_cantVlr_tres">$</span></div> -->
+
             <div class="grid_item total grid_subtitle">Producido del día</div>
             <div class="grid_item grid_subtitle"><span class="total" id="ttl_cant--b">$</span></div>
           </div>
@@ -134,7 +150,7 @@
 
         <div class="contenedor_boton">
           <button id="calcular">
-            <i class="fa-regular fa-circle-check"></i> Calcular Base
+            <i class="fa-regular fa-circle-check"></i> Generar Base
           </button>
         </div>
       </div>
@@ -195,6 +211,24 @@
               <div class="table_item"><span id="ttl1_p">$</span></div>
             </div>
 
+             <div class="table_container" id="fila500m_producido">
+              <div class="table_item">$ 500</div>
+              <div class="table_item"><span class="" id="can500m_p">0</span></div>
+              <div class="table_item"><span id="ttl500m_p">$</span></div>
+            </div>
+
+            <div class="table_container" id="fila200m_producido">
+              <div class="table_item">$ 200</div>
+              <div class="table_item"><span class="" id="can200m_p">0</span></div>
+              <div class="table_item"><span id="ttl200m_p">$</span></div>
+            </div>
+
+            <div class="table_container" id="fila100m_producido">
+              <div class="table_item">$ 100</div>
+              <div class="table_item"><span class="" id="can100m_p">0</span></div>
+              <div class="table_item"><span id="ttl100m_p">$</span></div>
+            </div>
+
             <div class="table_container container_total">
               <div class="table_item table_total fw-bold">Total Producido</div>
               <div class="table_item"><span class="total fw-bold" id="ttl_billP">$</span></div>
@@ -206,7 +240,7 @@
           <h2>Dinero para la base </h2>
           <div class="infor_taquilla">
             <h4 id="fecha_imprimir"></h4>
-            <h2 id="">Taq Contingencia</h2>
+            <h2 id="">Taq 3 Caja 19</h2>
           </div>
 
           <div class="table_producido">
@@ -249,6 +283,21 @@
               <div class="table_item">$ 1.000</div>
               <div class="table_item"><span id="can1_b">0</span></div>
               <div class="table_item"><span id="ttl1_b">$</span></div>
+            </div>
+            <div class="table_container" id="fila500m_base">
+              <div class="table_item">$ 500</div>
+              <div class="table_item"><span id="can500m_b">0</span></div>
+              <div class="table_item"><span id="ttl500m_b">$</span></div>
+            </div>
+            <div class="table_container" id="fila200m_base">
+              <div class="table_item">$ 200</div>
+              <div class="table_item"><span id="can200m_b">0</span></div>
+              <div class="table_item"><span id="ttl200m_b">$</span></div>
+            </div>
+            <div class="table_container" id="fila100m_base">
+              <div class="table_item">$ 100</div>
+              <div class="table_item"><span id="can100m_b">0</span></div>
+              <div class="table_item"><span id="ttl100m_b">$</span></div>
             </div>
             <div class="table_container container_total">
               <div class="table_item table_total table_subtitle fw-bold">Total Base</div>
@@ -300,7 +349,7 @@
     <p>Yeison Martinez | 2025</p>
   </footer>
 
-  <script src="../js/main_taquillaContingencia.js"></script>
+  <script src="../js/main_taquillas.js"></script>
 </body>
 
 </html>
