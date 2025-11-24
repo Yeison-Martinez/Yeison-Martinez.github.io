@@ -116,9 +116,9 @@ main {
 }
 
 .contendor_imprimir {
-    display: none;
+    display: block;
     width: 450px;
-    margin: 0;
+    margin: 0 10px;
     padding: 10px;
 }
 
