@@ -1,9 +1,9 @@
-const VLR_BOLETA_UNO = 22000; // 22.000
+const VLR_BOLETA_UNO = 25000; // 22.000
 const VLR_BOLETA_DOS = 50000; // 50.000
 const VLR_BOLETA_TRES = 0; // 17.600
 const VLR_BOLETA_CUATRO = 0; // 40.000
 
-const VLR_BASE = 200000;
+const VLR_BASE = 300000;
 
 const cantVlr_tres = document.getElementById("cantVlr_tres");
 const cantVlr_cuatro = document.getElementById("cantVlr_cuatro");
@@ -227,9 +227,7 @@ function calc() {
   // ttl_cantVlr_tres.innerHTML = `$ ${vlr_bTres_s}`;
 
   // TOTAL VLR CUATRO
-  // const cantVlrCuatro = parseFloat(
-  //   document.getElementById("cantVlr_cuatro").value
-  // );
+  // const cantVlrCuatro = parseFloat(document.getElementById("cantVlr_cuatro").value);
   const cantVlrCuatro = 0;
   const vlr_bCuatro = cantVlrCuatro * VLR_BOLETA_CUATRO;
   var vlr_bCuatro_s = Separador(vlr_bCuatro);
