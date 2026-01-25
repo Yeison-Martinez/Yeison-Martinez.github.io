@@ -3,7 +3,7 @@ const VLR_BOLETA_DOS = 50000; // 50.000
 const VLR_BOLETA_TRES = 0; // 17.600
 const VLR_BOLETA_CUATRO = 0; // 40.000
 
-const VLR_BASE = 300000;
+const VLR_BASE = 200000;
 
 const cantVlr_tres = document.getElementById("cantVlr_tres");
 const cantVlr_cuatro = document.getElementById("cantVlr_cuatro");
