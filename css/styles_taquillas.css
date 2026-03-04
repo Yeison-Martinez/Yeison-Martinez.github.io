@@ -288,6 +288,11 @@ h2 > .taq {
         ". . ."
         ". . ."
         ". . ."
+        "grid_separator grid_separator grid_separator"
+        ". . ."
+        ". . ."
+        ". . ."
+        ". . ."
         "total total .";
     grid-column-gap: 4px;
     grid-row-gap: 4px;
