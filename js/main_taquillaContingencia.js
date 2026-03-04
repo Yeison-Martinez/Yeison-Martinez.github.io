@@ -10,6 +10,9 @@ const VLR_BASE = 200000;
 
 const cantVlr_tres = document.getElementById("cantVlr_tres");
 const cantVlr_cuatro = document.getElementById("cantVlr_cuatro");
+const cantVlr_cinco = document.getElementById("cantVlr_cinco");
+const cantVlr_seis = document.getElementById("cantVlr_seis");
+const cantVlr_siete = document.getElementById("cantVlr_siete");
 const ttl_cantVlr_tres = document.getElementById("ttl_cantVlr_tres");
 const ttl_cantVlr_cuatro = document.getElementById("ttl_cantVlr_cuatro");
 const ttl_cantVlr_cinco = document.getElementById("ttl_cantVlr_cinco");
