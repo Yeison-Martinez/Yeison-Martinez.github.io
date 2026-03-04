@@ -8,11 +8,11 @@ const VLR_BOLETA_SIETE = 0; // 40.000
 
 const VLR_BASE = 200000;
 
-const cantVlr_tres = document.getElementById("cantVlr_tres");
-const cantVlr_cuatro = document.getElementById("cantVlr_cuatro");
-const cantVlr_cinco = document.getElementById("cantVlr_cinco");
-const cantVlr_seis = document.getElementById("cantVlr_seis");
-const cantVlr_siete = document.getElementById("cantVlr_siete");
+// const cantVlr_tres = document.getElementById("cantVlr_tres");
+// const cantVlr_cuatro = document.getElementById("cantVlr_cuatro");
+// const cantVlr_cinco = document.getElementById("cantVlr_cinco");
+// const cantVlr_seis = document.getElementById("cantVlr_seis");
+// const cantVlr_siete = document.getElementById("cantVlr_siete");
 const ttl_cantVlr_tres = document.getElementById("ttl_cantVlr_tres");
 const ttl_cantVlr_cuatro = document.getElementById("ttl_cantVlr_cuatro");
 const ttl_cantVlr_cinco = document.getElementById("ttl_cantVlr_cinco");
@@ -244,7 +244,7 @@ function calc() {
   // TOTAL VLR CINCO
   const cantVlrCinco = parseFloat(document.getElementById("cantVlr_cinco").value);
   // const cantVlrCinco = 0;
-  const vlr_bCinco = cantVlrCinco * VLR_BOLETA_TRES;
+  const vlr_bCinco = cantVlrCinco * VLR_BOLETA_CINCO;
   var vlr_bCinco_s = Separador(vlr_bCinco);
   ttl_cantVlr_cinco.innerHTML = `$ ${vlr_bCinco_s}`;
 
