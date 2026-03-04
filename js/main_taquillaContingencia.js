@@ -1,12 +1,12 @@
 const VLR_BOLETA_UNO = 12000; // 22.000
 const VLR_BOLETA_DOS = 12000; // 50.000
 const VLR_BOLETA_TRES = 18000; // 17.600
-const VLR_BOLETA_CUATRO = 0; // 40.000
-const VLR_BOLETA_CINCO = 0; // 40.000
-const VLR_BOLETA_SEIS = 0; // 40.000
-const VLR_BOLETA_SIETE = 0; // 40.000
+const VLR_BOLETA_CUATRO = 5000; // 40.000
+const VLR_BOLETA_CINCO = 5000; // 40.000
+const VLR_BOLETA_SEIS = 5000; // 40.000
+const VLR_BOLETA_SIETE = 5000; // 40.000
 
-const VLR_BASE = 200000;
+const VLR_BASE = 500000;
 
 // const cantVlr_tres = document.getElementById("cantVlr_tres");
 // const cantVlr_cuatro = document.getElementById("cantVlr_cuatro");
