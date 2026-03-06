@@ -1,14 +1,14 @@
 const VLR_BOLETA_UNO = 12000; // 22.000
 const VLR_BOLETA_DOS = 12000; // 50.000
 const VLR_BOLETA_TRES = 18000; // 17.600
-const VLR_BOLETA_CUATRO = 5000; // 40.000
-const VLR_BOLETA_CINCO = 5000; // 40.000
+const VLR_BOLETA_CUATRO = 10000; // 40.000
+const VLR_BOLETA_CINCO = 15000; // 40.000
 const VLR_BOLETA_SEIS = 5000; // 40.000
 const VLR_BOLETA_SIETE = 5000; // 40.000
 const VLR_BOLETA_OCHO = 5000; // 40.000
 const VLR_BOLETA_NUEVE = 5000; // 40.000
 
-const VLR_BASE = 500000;
+const VLR_BASE = 300000;
 
 const ttl_cantVlr_tres = document.getElementById("ttl_cantVlr_tres");
 const ttl_cantVlr_cuatro = document.getElementById("ttl_cantVlr_cuatro");
@@ -248,30 +248,30 @@ function calc() {
   ttl_cantVlr_cinco.innerHTML = `$ ${vlr_bCinco_s}`;
 
   // TOTAL VLR SEIS
-  const cantVlrSeis = parseFloat(document.getElementById("cantVlr_seis").value);
-  // const cantVlrSeis = 0;
+  // const cantVlrSeis = parseFloat(document.getElementById("cantVlr_seis").value);
+  const cantVlrSeis = 0;
   const vlr_bSeis = cantVlrSeis * VLR_BOLETA_SEIS;
   var vlr_bSeis_s = Separador(vlr_bSeis);
   ttl_cantVlr_seis.innerHTML = `$ ${vlr_bSeis_s}`;
 
   
   // TOTAL VLR SIETE
-  const cantVlrSiete = parseFloat(document.getElementById("cantVlr_siete").value);
-  // const cantVlrSiete = 0;
+  // const cantVlrSiete = parseFloat(document.getElementById("cantVlr_siete").value);
+  const cantVlrSiete = 0;
   const vlr_bSiete = cantVlrSiete * VLR_BOLETA_SIETE;
   var vlr_bSiete_s = Separador(vlr_bSiete);
   ttl_cantVlr_siete.innerHTML = `$ ${vlr_bSiete_s}`;
 
   // TOTAL VLR OCHO
-  const cantVlrOcho = parseFloat(document.getElementById("cantVlr_ocho").value);
-  // const cantVlrOcho = 0;
+  // const cantVlrOcho = parseFloat(document.getElementById("cantVlr_ocho").value);
+  const cantVlrOcho = 0;
   const vlr_bOcho = cantVlrOcho * VLR_BOLETA_OCHO;
   var vlr_bOcho_s = Separador(vlr_bOcho);
   ttl_cantVlr_ocho.innerHTML = `$ ${vlr_bOcho_s}`;
 
   // TOTAL VLR NUEVE
-  const cantVlrNueve = parseFloat(document.getElementById("cantVlr_nueve").value);
-  // const cantVlrNueve = 0;
+  // const cantVlrNueve = parseFloat(document.getElementById("cantVlr_nueve").value);
+  const cantVlrNueve = 0;
   const vlr_bNueve = cantVlrNueve * VLR_BOLETA_NUEVE;
   var vlr_bNueve_s = Separador(vlr_bNueve);
   ttl_cantVlr_nueve.innerHTML = `$ ${vlr_bNueve_s}`;
