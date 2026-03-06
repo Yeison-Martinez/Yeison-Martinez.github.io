@@ -263,15 +263,15 @@ function calc() {
   ttl_cantVlr_siete.innerHTML = `$ ${vlr_bSiete_s}`;
 
   // TOTAL VLR OCHO
-  // const cantVlrOcho = parseFloat(document.getElementById("cantVlr_ocho").value);
-  const cantVlrOcho = 0;
+  const cantVlrOcho = parseFloat(document.getElementById("cantVlr_ocho").value);
+  // const cantVlrOcho = 0;
   const vlr_bOcho = cantVlrOcho * VLR_BOLETA_OCHO;
   var vlr_bOcho_s = Separador(vlr_bOcho);
   ttl_cantVlr_ocho.innerHTML = `$ ${vlr_bOcho_s}`;
 
   // TOTAL VLR NUEVE
-  // const cantVlrNueve = parseFloat(document.getElementById("cantVlr_nueve").value);
-  const cantVlrNueve = 0;
+  const cantVlrNueve = parseFloat(document.getElementById("cantVlr_nueve").value);
+  // const cantVlrNueve = 0;
   const vlr_bNueve = cantVlrNueve * VLR_BOLETA_NUEVE;
   var vlr_bNueve_s = Separador(vlr_bNueve);
   ttl_cantVlr_nueve.innerHTML = `$ ${vlr_bNueve_s}`;
