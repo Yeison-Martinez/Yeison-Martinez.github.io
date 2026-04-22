@@ -194,11 +194,13 @@ function calc() {
   ttlbill.innerHTML = `$ ${ttlbills_s}`;
 
   // TOTAL PLASTICO
+  var ttl_deb = 0;
+  var ttl_cre = 0;
   var ttl_deb = parseFloat(document.getElementById("tarj_deb--vlr").value);
   var ttl_cre = parseFloat(document.getElementById("tarj_cre--vlr").value);
   var sum_plas = ttl_deb + ttl_cre;
   var sum_plas_s = Separador(sum_plas);
-  ttl_plas.innerHTML = `$ ${sum_plas_s}`;
+  // ttl_plas.innerHTML = `$ ${sum_plas_s}`;
 
   // TOTAL BOLETAS VLR UNO
   var cant22k = parseFloat(document.getElementById("cant22k").value);
