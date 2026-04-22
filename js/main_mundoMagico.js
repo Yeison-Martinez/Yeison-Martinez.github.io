@@ -1,5 +1,5 @@
 const VLR_BOLETA_UNO = 6000; // 6.000
-const VLR_BOLETA_DOS = 12000; // 50.000
+const VLR_BOLETA_DOS = 0; // 50.000
 
 const VLR_BASE = 200000;
 
@@ -211,7 +211,7 @@ function calc() {
   // var cant50k = parseFloat(document.getElementById("cant50k").value);
   var vlr_b50 = cant50k * VLR_BOLETA_DOS;
   var vlr_b50_s = Separador(vlr_b50);
-  ttl_cant50k.innerHTML = `$ ${vlr_b50_s}`;
+  // ttl_cant50k.innerHTML = `$ ${vlr_b50_s}`;
 
 
   // PRODUCIDO TOTAL
