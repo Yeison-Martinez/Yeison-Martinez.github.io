@@ -282,13 +282,9 @@ h2 > .taq {
     padding: 5px;
     display: grid;
     grid-template-columns: 1fr 130px 1fr;
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
         ". . ."
-        ". . ."
-        ". . ."
-        ". . ."
-        "separator separator separator"
         ". . ."
         ". . ."
         "total total .";
