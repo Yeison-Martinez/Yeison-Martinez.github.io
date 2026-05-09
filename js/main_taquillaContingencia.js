@@ -1,14 +1,14 @@
-const VLR_BOLETA_UNO = 12000; // 22.000
-const VLR_BOLETA_DOS = 12000; // 50.000
-const VLR_BOLETA_TRES = 18000; // 17.600
-const VLR_BOLETA_CUATRO = 5000; // 40.000
-const VLR_BOLETA_CINCO = 5000; // 40.000
-const VLR_BOLETA_SEIS = 5000; // 40.000
-const VLR_BOLETA_SIETE = 5000; // 40.000
-const VLR_BOLETA_OCHO = 5000; // 40.000
-const VLR_BOLETA_NUEVE = 5000; // 40.000
+const VLR_BOLETA_UNO = 24000; // 22.000
+const VLR_BOLETA_DOS = 50000; // 50.000
+const VLR_BOLETA_TRES = 0; // 17.600
+const VLR_BOLETA_CUATRO = 0; // 40.000
+const VLR_BOLETA_CINCO = 0; // 40.000
+const VLR_BOLETA_SEIS = 0; // 40.000
+const VLR_BOLETA_SIETE = 0; // 40.000
+const VLR_BOLETA_OCHO = 0; // 40.000
+const VLR_BOLETA_NUEVE = 0; // 40.000
 
-const VLR_BASE = 500000;
+const VLR_BASE = 300000;
 
 const ttl_cantVlr_tres = document.getElementById("ttl_cantVlr_tres");
 const ttl_cantVlr_cuatro = document.getElementById("ttl_cantVlr_cuatro");
@@ -227,54 +227,54 @@ function calc() {
   ttl_cant50k.innerHTML = `$ ${vlr_b50_s}`;
 
   // TOTAL VLR TRES
-  const cantVlrTres = parseFloat(document.getElementById("cantVlr_tres").value);
-  // const cantVlrTres = 0;
+  // const cantVlrTres = parseFloat(document.getElementById("cantVlr_tres").value);
+  const cantVlrTres = 0;
   const vlr_bTres = cantVlrTres * VLR_BOLETA_TRES;
   var vlr_bTres_s = Separador(vlr_bTres);
-  ttl_cantVlr_tres.innerHTML = `$ ${vlr_bTres_s}`;
+  // ttl_cantVlr_tres.innerHTML = `$ ${vlr_bTres_s}`;
 
   // TOTAL VLR CUATRO
-  const cantVlrCuatro = parseFloat(document.getElementById("cantVlr_cuatro").value);
-  // const cantVlrCuatro = 0;
+  // const cantVlrCuatro = parseFloat(document.getElementById("cantVlr_cuatro").value);
+  const cantVlrCuatro = 0;
   const vlr_bCuatro = cantVlrCuatro * VLR_BOLETA_CUATRO;
   var vlr_bCuatro_s = Separador(vlr_bCuatro);
-  ttl_cantVlr_cuatro.innerHTML = `$ ${vlr_bCuatro_s}`;
+  // ttl_cantVlr_cuatro.innerHTML = `$ ${vlr_bCuatro_s}`;
 
   // TOTAL VLR CINCO
-  const cantVlrCinco = parseFloat(document.getElementById("cantVlr_cinco").value);
-  // const cantVlrCinco = 0;
+  // const cantVlrCinco = parseFloat(document.getElementById("cantVlr_cinco").value);
+  const cantVlrCinco = 0;
   const vlr_bCinco = cantVlrCinco * VLR_BOLETA_CINCO;
   var vlr_bCinco_s = Separador(vlr_bCinco);
-  ttl_cantVlr_cinco.innerHTML = `$ ${vlr_bCinco_s}`;
+  // ttl_cantVlr_cinco.innerHTML = `$ ${vlr_bCinco_s}`;
 
   // TOTAL VLR SEIS
-  const cantVlrSeis = parseFloat(document.getElementById("cantVlr_seis").value);
-  // const cantVlrSeis = 0;
+  // const cantVlrSeis = parseFloat(document.getElementById("cantVlr_seis").value);
+  const cantVlrSeis = 0;
   const vlr_bSeis = cantVlrSeis * VLR_BOLETA_SEIS;
   var vlr_bSeis_s = Separador(vlr_bSeis);
-  ttl_cantVlr_seis.innerHTML = `$ ${vlr_bSeis_s}`;
+  // ttl_cantVlr_seis.innerHTML = `$ ${vlr_bSeis_s}`;
 
   
   // TOTAL VLR SIETE
-  const cantVlrSiete = parseFloat(document.getElementById("cantVlr_siete").value);
-  // const cantVlrSiete = 0;
+  // const cantVlrSiete = parseFloat(document.getElementById("cantVlr_siete").value);
+  const cantVlrSiete = 0;
   const vlr_bSiete = cantVlrSiete * VLR_BOLETA_SIETE;
   var vlr_bSiete_s = Separador(vlr_bSiete);
-  ttl_cantVlr_siete.innerHTML = `$ ${vlr_bSiete_s}`;
+  // ttl_cantVlr_siete.innerHTML = `$ ${vlr_bSiete_s}`;
 
   // TOTAL VLR OCHO
-  const cantVlrOcho = parseFloat(document.getElementById("cantVlr_ocho").value);
-  // const cantVlrOcho = 0;
+  // const cantVlrOcho = parseFloat(document.getElementById("cantVlr_ocho").value);
+  const cantVlrOcho = 0;
   const vlr_bOcho = cantVlrOcho * VLR_BOLETA_OCHO;
   var vlr_bOcho_s = Separador(vlr_bOcho);
-  ttl_cantVlr_ocho.innerHTML = `$ ${vlr_bOcho_s}`;
+  // ttl_cantVlr_ocho.innerHTML = `$ ${vlr_bOcho_s}`;
 
   // TOTAL VLR NUEVE
-  const cantVlrNueve = parseFloat(document.getElementById("cantVlr_nueve").value);
-  // const cantVlrNueve = 0;
+  // const cantVlrNueve = parseFloat(document.getElementById("cantVlr_nueve").value);
+  const cantVlrNueve = 0;
   const vlr_bNueve = cantVlrNueve * VLR_BOLETA_NUEVE;
   var vlr_bNueve_s = Separador(vlr_bNueve);
-  ttl_cantVlr_nueve.innerHTML = `$ ${vlr_bNueve_s}`;
+  // ttl_cantVlr_nueve.innerHTML = `$ ${vlr_bNueve_s}`;
 
   // PRODUCIDO TOTAL
   const sum_bol = vlr_b50 + vlr_b22 + vlr_bTres + vlr_bCuatro + vlr_bCinco + vlr_bSeis + vlr_bSiete + vlr_bOcho + vlr_bNueve;
