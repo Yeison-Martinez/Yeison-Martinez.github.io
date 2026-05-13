@@ -8,7 +8,7 @@ const VLR_BOLETA_SIETE = 0; // 40.000
 const VLR_BOLETA_OCHO = 0; // 40.000
 const VLR_BOLETA_NUEVE = 0; // 40.000
 
-const VLR_BASE = 300000;
+const VLR_BASE = 500000;
 
 const ttl_cantVlr_tres = document.getElementById("ttl_cantVlr_tres");
 const ttl_cantVlr_cuatro = document.getElementById("ttl_cantVlr_cuatro");
