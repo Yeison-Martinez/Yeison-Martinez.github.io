@@ -1,4 +1,4 @@
-const VLR_BOLETA_UNO = 24000; // 22.000
+const VLR_BOLETA_UNO = 25000; // 22.000
 const VLR_BOLETA_DOS = 50000; // 50.000
 const VLR_BOLETA_TRES = 0; // 17.600
 const VLR_BOLETA_CUATRO = 0; // 40.000
@@ -8,7 +8,7 @@ const VLR_BOLETA_SIETE = 0; // 40.000
 const VLR_BOLETA_OCHO = 0; // 40.000
 const VLR_BOLETA_NUEVE = 0; // 40.000
 
-const VLR_BASE = 500000;
+const VLR_BASE = 300000;
 
 const ttl_cantVlr_tres = document.getElementById("ttl_cantVlr_tres");
 const ttl_cantVlr_cuatro = document.getElementById("ttl_cantVlr_cuatro");
